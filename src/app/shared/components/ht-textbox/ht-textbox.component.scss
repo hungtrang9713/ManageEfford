@@ -1,0 +1,19 @@
+@import '../../../../assets/scss/common.scss';
+
+:host {
+    .textbox {
+        margin-bottom: 8px;
+        .label {
+            font-weight: $font-weight-bold;
+            &.label-vertical {
+                margin-bottom: 4px;
+            }
+            padding-right: 4px;  
+        }
+        input {
+            border: $border;
+            border-radius: $border-radius;
+        }
+    }
+    
+}

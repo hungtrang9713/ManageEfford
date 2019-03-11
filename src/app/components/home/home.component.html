@@ -1,0 +1,45 @@
+<div class=home>
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened>
+      <div class="user ht-flex">
+        <img src="assets/images/user.png" />
+        <div class="name">Bùi Hùng Tráng</div>
+        <mat-icon mat-button [matMenuTriggerFor]="menu">more_vert</mat-icon>
+        <mat-menu #menu="matMenu">
+          <button mat-menu-item>Đổi mật khẩu</button>
+          <button mat-menu-item>Cập nhật ảnh đại diện</button>
+          <button mat-menu-item>Đăng xuất</button>
+        </mat-menu>
+      </div>
+      <mat-toolbar color="primary">
+        <mat-toolbar-row routerLink="/home/work-schedule">
+          <mat-icon class="example-icon">verified_user</mat-icon>
+          <span>Đăng kí lịch làm việc</span>
+        </mat-toolbar-row>
+
+        <mat-toolbar-row routerLink="/home/work-schedule">
+          <mat-icon class="example-icon">verified_user</mat-icon>
+          <span>Chấm công</span>
+        </mat-toolbar-row>
+
+        <mat-toolbar-row routerLink="/home/work-schedule">
+          <mat-icon class="example-icon">favorite</mat-icon>
+          <span>Quản lý thành viên</span>
+        </mat-toolbar-row>
+
+        <mat-toolbar-row routerLink="/home/work-schedule">
+          <mat-icon class="example-icon">favorite</mat-icon>
+          <span>Quản lý các nhóm</span>
+        </mat-toolbar-row>
+
+        <mat-toolbar-row routerLink="/home/manager-pbi">
+          <mat-icon class="example-icon">favorite</mat-icon>
+          <span>Quản lý PBI</span>
+        </mat-toolbar-row>
+      </mat-toolbar>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

@@ -1,0 +1,31 @@
+@import '../../../assets/scss/common.scss';
+@import '../../../assets/scss/mixin.scss';
+@import '../../../assets/scss/urlImage.scss';
+@import "~bootstrap/scss/bootstrap.scss";
+
+:host {
+    @include host();
+    .home {
+        @include host();
+        mat-sidenav-container {
+            @include host();
+            mat-toolbar {
+                flex-grow: 1;
+            }
+        }
+    }
+    .user {
+        padding: 16px;
+        img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+    }
+}
+
+::ng-deep {
+    .mat-drawer-inner-container {
+        @include host();
+    }
+}

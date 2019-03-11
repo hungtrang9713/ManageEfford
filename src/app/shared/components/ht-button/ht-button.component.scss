@@ -1,0 +1,45 @@
+@import '../../../../assets/scss/common.scss';
+
+:host {
+    .button {
+        padding: 8px 10px;
+        border-radius: $border-radius;
+        cursor: pointer;
+        &.btn-basic {
+            border: $border;
+            &:hover {
+                color: $text-color;
+                background-color: #f7f7f7;
+            }
+        }
+        &.btn-primary {
+            color: #fff;
+            border: $border;
+            background-color: #007bff;
+            border-color: #007bff;
+            &:hover {
+                background-color: #006bef;
+            }
+        }
+        &.btn-danger {
+            color: #fff;
+            border: $border;
+            background-color: #dc3545;
+            border-color: #dc3545;
+            &:hover {
+                background-color: #c12a2a;
+            }
+        }
+        &.btn-link {
+            color: #007bff;
+            &:hover {
+                color: #0056b3;
+                text-decoration: underline !important;
+            }
+        }
+        .icon {
+            font-size: 16px;
+            margin-right: 8px;
+        }
+    }
+}

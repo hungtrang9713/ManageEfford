@@ -1,1 +1,115 @@
+@import '@angular/material/prebuilt-themes/deeppurple-amber.css';
 /* You can add global styles to this file, and also import other style files */
+.ht-flex {
+    display: flex;
+}
+
+/* direction */
+.ht-flex-column {
+    flex-direction: column;
+}
+
+.ht-flex-row {
+    flex-direction: row;
+}
+
+/* wrap */
+.ht-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.ht-flex-nowrap {
+    flex-wrap: nowrap;
+}
+
+/* justify-content */
+.ht-justify-content-center {
+    justify-content: center;
+}
+
+.ht-justify-content-start {
+    justify-content: flex-start;
+}
+
+.ht-justify-content-end {
+    justify-content: flex-end;
+}
+
+.ht-justify-content-around {
+    justify-content: space-around;
+}
+
+.ht-justify-content-between {
+    justify-content: space-between;
+}
+
+/* align-items */
+.ht-align-items-center {
+    align-items: center;
+}
+
+.ht-align-items-start {
+    align-items: flex-start;
+}
+
+.ht-align-items-end {
+    align-items: flex-end;
+}
+
+.ht-align-items-stretch {
+    align-items: stretch;
+}
+
+/* align-content */
+.ht-align-content-between {
+    align-content: space-between;
+}
+
+.ht-align-content-around {
+    align-content: space-around;
+}
+
+.ht-align-content-start {
+    align-content: flex-start;
+}
+
+.ht-align-content-end {
+    align-content: flex-end;
+}
+
+.ht-align-content-stretch {
+    align-content: stretch;
+}
+
+/* child */
+.ht-flex-grow {
+    flex-grow: 1;
+}
+
+.ht-align-self-center {
+    align-self: center;
+}
+
+.ht-align-self-start {
+    align-self: flex-start;
+}
+
+.ht-align-self-end {
+    align-self: flex-end;
+}
+
+.ht-align-self-stretch {
+    align-self: stretch;
+}
+
+
+/* body */
+html, body {
+    height: 100%;
+    color: #1f1f1f;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 0;
+    padding: 0;
+}
