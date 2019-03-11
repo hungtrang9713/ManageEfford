@@ -1,0 +1,11 @@
+<div class="login-container ht-flex ht-flex-column">
+    <div class="logo ">Đăng nhập</div>
+    <ht-textbox label="Tên đăng nhập" [isVertical]='true' [(ngModel)]="currentData.username"> </ht-textbox>
+    <ht-textbox label="Mật khẩu" [isVertical]='true' [(ngModel)]="currentData.password"></ht-textbox>
+    <div class="footer ht-flex ht-justify-content-between">
+        <div class="left"></div>
+        <div class="right">
+            <ht-button text="Đăng nhập" type="primary" icon="face" (buttonAction)="login()"></ht-button>
+        </div>
+    </div>
+</div>

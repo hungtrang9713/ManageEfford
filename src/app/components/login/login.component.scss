@@ -1,0 +1,24 @@
+@import '../../../assets/scss/common.scss';
+@import '../../../assets/scss/mixin.scss';
+@import '../../../assets/scss/urlImage.scss';
+@import "~bootstrap/scss/bootstrap.scss";
+
+:host {
+    @extend .login-bg;
+    .login-container {
+        width: 400px;
+        padding: 32px;
+        background: #fff;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border: 1px solid;
+        border-radius: $border-radius;
+        .logo {
+            margin-bottom: 16px;
+            @extend .font-weight-bold;
+        }
+    }
+    @include host();
+}
