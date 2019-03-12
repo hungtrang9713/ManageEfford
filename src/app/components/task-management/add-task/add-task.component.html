@@ -1,3 +1,60 @@
-<p>
-  add-task works!
-</p>
+<div class="container">
+<h3 class="d-flex justify-content-between">
+  <div>Danh sách công việc</div>
+  <button class="btn btn-primary pull-right" (click)="addEvent()">
+    Thêm mới
+  </button>
+</h3>
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Loại công việc</th>
+      <th>Tên công việc</th>
+      <th>Điểm năng suất</th>
+      <th>Điểm phạt</th>
+      <th>Điểm ghi nhận</th>
+      <th>Ghi chú</th>
+      <th>Xóa</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <tr>
+      <td>
+        <div class="form-control select-type">
+        <select>
+            <option value="0">UI</option>
+            <option value="1" checked>PBI</option>
+        </select>
+        <select>
+          <option value="0">297080</option>
+          <option value="1" checked>297080</option>
+        </select>
+      </div>
+
+      </td>
+      <td>
+        <input type="text" class="form-control" />
+      </td>
+      <td>
+        <input type="text" class="form-control" />
+      </td>
+      <td>
+        <input type="text" class="form-control" />
+      </td>
+      <td>
+        <input class="form-control" type="text" placeholder="Not set" />
+      </td>
+      <td>
+        <input class="form-control" type="text" placeholder="Not set" />
+      </td>
+      <td>
+        <button class="btn btn-danger">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </tbody>
+</table>
+</div>
