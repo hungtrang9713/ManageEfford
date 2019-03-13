@@ -1,6 +1,17 @@
-:host{
-    .select-type{
-        min-width: 150px;
-        border: none !important;
-    }
+::ng-deep {
+  .mat-header-cell {
+    font-size: 14px;
+    font-weight: bold;
+  }
+}
+
+:host {
+  .select-type {
+    min-width: 150px;
+    border: none !important;
+  }
+
+  .container {
+    margin-top: 32px;
+  }
 }

@@ -10,14 +10,16 @@ import { SharedComponentModule } from './shared/components/shared-component.modu
 import { FormsModule } from '@angular/forms';
 import { AddTaskComponent } from './components/task-management/add-task/add-task.component';
 import { ListDeveloperComponent } from './components/task-management/list-developer/list-developer.component';
-import { MatPaginatorModule, MatTableModule } from '@angular/material';
+import { MatPaginatorModule, MatTableModule, MatInputModule } from '@angular/material';
+import { WeekReviewComponent } from './components/task-management/week-review/week-review.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     AddTaskComponent,
-    ListDeveloperComponent
+    ListDeveloperComponent,
+    WeekReviewComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +29,8 @@ import { MatPaginatorModule, MatTableModule } from '@angular/material';
     SharedComponentModule,
     FormsModule,
     MatPaginatorModule,
-    MatTableModule
+    MatTableModule,
+    MatInputModule
   ],
   providers: [],
   bootstrap: [AppComponent]
