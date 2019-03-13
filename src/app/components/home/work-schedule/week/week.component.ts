@@ -1,14 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-
-enum Day {
-  Sunday = 0,
-  Monday = 1,
-  Tuesday = 2,
-  Wednesday = 3,
-  Thursday = 4,
-  Friday = 5,
-  Saturday = 6
-}
+import { Component, OnInit, Input } from '@angular/core';
+import { Day } from 'src/app/shared/enums/day';
 
 @Component({
   selector: 'app-week',
@@ -22,7 +13,10 @@ export class WeekComponent implements OnInit {
   ngOnInit() {
   }
 
-  daysOfWeek: Array<Day> = [Day.Monday, Day.Tuesday, Day.Wednesday, Day.Thursday, Day.Friday, Day.Saturday, Day.Sunday];
+  daysOfWeek: Array<Day> = [Day.Monday, Day.Tuesday, Day.Wednesday, Day.Thursday, Day.Friday, Day.Saturday];
+
+  @Input()
+  week: number;
   
 
 }

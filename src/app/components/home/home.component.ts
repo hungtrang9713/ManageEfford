@@ -13,8 +13,8 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     $("mat-toolbar-row").on("click", function() {
-      $("mat-toolbar-row").css("background", "#673ab7");
-      $(this).css("background", "#0f0184");
+      $("mat-toolbar-row").removeClass("selected");
+      $(this).addClass("selected");
     })
   }
 

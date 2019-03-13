@@ -1,9 +1,8 @@
-<div class="switch-date ht-flex">
-  <i class="material-icons" (click)="prevWeek()">arrow_left</i>
+<div class="switch-date ht-flex ht-justify-content-center ht-align-items-center">
+  <i class="material-icons" (click)="prevWeek()">arrow_back_ios</i>
   <div>{{selectedWeek}}</div>
-  <i class="material-icons" (click)="nextWeek()">arrow_right</i>
+  <i class="material-icons" (click)="nextWeek()">
+    arrow_forward_ios</i>
 </div>
 
-<div class="week">
-  <div class="day"></div>
-</div>
+<app-week [week]="selectedWeekNumber"></app-week>

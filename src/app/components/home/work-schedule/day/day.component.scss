@@ -1,0 +1,40 @@
+@import '../../../../../assets/scss/common.scss';
+@import '../../../../../assets/scss/mixin.scss';
+@import '../../../../../assets/scss/urlImage.scss';
+@import "~bootstrap/scss/bootstrap.scss";
+
+:host {
+    .day {
+        // padding: 8px;
+        border: $border;
+        border-radius: $border-radius;
+        height: 350px;
+        &.current-day {
+            background: #0277BD;
+            color: white;
+        }
+        &.day-over {
+            background: #0277BD; 
+            opacity: 0.6;
+            color: white;
+            cursor: not-allowed !important;
+            .btn-edit {
+                cursor: not-allowed !important;
+                pointer-events: none;
+            }
+        }
+
+        .header {
+            border-bottom: $border;
+        }
+        .center {
+            font-size: 20px;
+            font-weight: 500;
+        }
+        .bottom {
+            .btn-edit {
+                cursor: pointer;
+            }
+        }
+    }
+}

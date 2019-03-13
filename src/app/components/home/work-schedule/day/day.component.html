@@ -1,5 +1,17 @@
-<div class="day">
-  <div class="header">Thứ 2</div>
-  <div class="center">Sáng</div>
-  <div class="bottom"></div>
+<div class="day ht-flex ht-flex-column ht-align-items-center"
+  [ngClass]="{'current-day': isCurrentDay, 'day-over': isOver}">
+  <div class="header">{{dayText}}</div>
+  <div class="center ht-flex-grow ht-flex ht-justify-content-center ht-align-items-center">
+    <span>{{workStatusText}}</span>
+  </div>
+  <div class="bottom">
+    <div class="btn-edit">
+        <i class="material-icons" [matMenuTriggerFor]="appMenu">edit</i>
+    </div>
+  </div>
 </div>
+
+<mat-menu #appMenu="matMenu" xPosition="after" yPosition="above">
+  <button mat-menu-item *ngFor="let workStatus of listWorkStatus"
+    (click)="setWorkStatus(workStatus)">{{convertWorkStatusToString(workStatus)}}</button>
+</mat-menu>

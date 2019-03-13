@@ -22,6 +22,16 @@
             margin-right: 8px;
         }
     }
+    mat-toolbar {
+        background: #0277BD !important;
+        color: white;
+        mat-toolbar-row {
+            cursor: pointer;
+            &.selected {
+                background: #004077;
+            }
+        }
+    }
 }
 
 ::ng-deep {

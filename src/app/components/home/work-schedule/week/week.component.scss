@@ -1,0 +1,12 @@
+@import '../../../../../assets/scss/common.scss';
+@import '../../../../../assets/scss/mixin.scss';
+@import '../../../../../assets/scss/urlImage.scss';
+@import "~bootstrap/scss/bootstrap.scss";
+
+:host {
+    margin-left: 16px;
+    app-day {
+        margin-right: 16px;
+        flex: 100%;
+    }
+}

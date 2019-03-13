@@ -2,3 +2,15 @@
 @import '../../../../assets/scss/mixin.scss';
 @import '../../../../assets/scss/urlImage.scss';
 @import "~bootstrap/scss/bootstrap.scss";
+
+:host {
+    @include host();
+    justify-content: center;
+    .switch-date {
+        font-size: 24px;
+        margin-bottom: 16px;
+        .material-icons {
+            font-size: 24px;
+        }
+    }
+}
