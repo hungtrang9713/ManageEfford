@@ -15,12 +15,12 @@ namespace MISA.CRM.Models
 
         public string PBIName { get; set; }
 
-        public float ProductivityScore { get; set; }
+        public decimal ProductivityScore { get; set; }
 
-        public float PenaltyScore { get; set; }
+        public decimal PenaltyScore { get; set; }
 
 
-        public float PlusScore { get; set; }
+        public decimal PlusScore { get; set; }
 
         public string Note { get; set; }
 
@@ -29,5 +29,21 @@ namespace MISA.CRM.Models
         public DateTime ModifiedDate { get; set; } = DateTime.Today;
 
         public Guid UserID { get; set; }
+
+        public int Week { get; set; }
+
+        public decimal Score { get; set; }
+
+        public string FullName { get; set; }
+
+        public string UserName { get; set; }
+
+        public decimal Week1 { get; set; }
+
+        public decimal Week2 { get; set; }
+
+        public decimal Week3 { get; set; }
+
+        public decimal Week4 { get; set; }
     }
 }

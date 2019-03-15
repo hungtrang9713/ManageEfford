@@ -5,11 +5,13 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace MISA.CRM.Controllers
 {
     public class BaseController<T> : ApiController
     {
+        protected BLBase blBase = new BLBase();
         /// <summary>
         /// Lưu dữ liệu vào DB
         /// </summary>
@@ -20,7 +22,6 @@ namespace MISA.CRM.Controllers
             bool saveSuccess = true;
             try
             {
-                BLBase blBase = new BLBase();
                 saveSuccess = blBase.SaveData(data, typeof(T)) > 0;
             }
             catch (Exception)

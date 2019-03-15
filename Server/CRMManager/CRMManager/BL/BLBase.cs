@@ -1,6 +1,9 @@
 ﻿using MISA.CRM.MANAGER.DL;
+using MISA.CRM.Models;
+using OfficeOpenXml;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 
@@ -42,6 +45,23 @@ namespace MISA.CRM.MANAGER.BL
         public int SaveData(object data, Type dataType)
         {
             return DL.InsertObjectToDB(data, dataType);
+        }
+
+        public List<T> GetListData<T>(object param, string procName)
+        {
+            return this.DL.GetListData<T>(param, procName);
+        }
+
+        public MemoryStream ExportData<T>(IEnumerable<T> data)
+        {
+            ExcelPackage excel = new ExcelPackage();
+            var workSheet = excel.Workbook.Worksheets.Add("Sheet 1");
+            workSheet.Cells[1, 1].LoadFromCollection(data, true);
+
+            var memoryStream = new MemoryStream();
+            excel.SaveAs(memoryStream);
+
+            return memoryStream;
         }
         #endregion
     }

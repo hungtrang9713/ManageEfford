@@ -103,6 +103,55 @@ namespace MISA.CRM.MANAGER.DL
                 }
             }
         }
+
+        public List<T> GetListData<T>(object param, string procName = "")
+        {
+            List<T> listResult = new List<T>();
+            try
+            {
+                procName = string.IsNullOrWhiteSpace(procName) ? "Proc_GetList" + typeof(T).Name : procName;
+                Conn.Open();
+                SqlCommand cmd = Conn.CreateCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = procName;
+                MappingParameter(cmd, param.GetType(), param);
+
+                using (var reader = cmd.ExecuteReader())
+                {
+                    var oObject = Activator.CreateInstance<T>();
+                    while (reader.Read())
+                    {
+                        if (reader.HasRows)
+                        {
+                            AutoMapingObject(reader, ref oObject);
+                            listResult.Add(oObject);
+                        }
+                    }
+                }
+            }
+            finally
+            {
+                if (Conn != null && Conn.State != ConnectionState.Closed)
+                {
+                    Conn.Close();
+                }
+            }
+
+            return listResult;
+        }
+
+        public void AutoMapingObject<T>(SqlDataReader reader, ref T oObject)
+        {
+            for (int i = 0; i < reader.FieldCount; ++i)
+            {
+                string fieldName = reader.GetName(i);
+                reader.GetValue(i);
+                if (oObject.GetType().GetProperty(fieldName) != null && reader[fieldName] != DBNull.Value)
+                {
+                    oObject.GetType().GetProperty(fieldName).SetValue(oObject, reader[fieldName]);
+                }
+            }
+        }
         #endregion
     }
 }
