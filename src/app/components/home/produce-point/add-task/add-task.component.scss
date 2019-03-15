@@ -1,3 +1,8 @@
+@import '../../../../../assets/scss/common.scss';
+@import '../../../../../assets/scss/mixin.scss';
+@import '../../../../../assets/scss/urlImage.scss';
+@import '../../../../../assets/scss/style.scss';
+@import "~bootstrap/scss/bootstrap.scss";
 ::ng-deep {
   .mat-header-cell {
     font-size: 14px;
@@ -7,7 +12,6 @@
 
 :host {
   .select-type {
-    min-width: 150px;
     border: none !important;
   }
 
