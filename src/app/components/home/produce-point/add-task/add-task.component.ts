@@ -43,6 +43,7 @@ export class AddTaskComponent implements OnInit {
       FinalScore: 4,
       Note: `chậm trể`
     }];
+    console.log(`ID: ${this.data.emID} và ngày : ${this.data.date}`);
   }
   /**
    * hàm thêm mới task
