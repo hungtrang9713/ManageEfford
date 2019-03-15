@@ -19,6 +19,8 @@ export class WeekReviewComponent implements OnInit {
   // các trường được hiển thị
   displayedColumns = ['Week', 'EffortPoint', 'MinusPoint', 'FinalScore'];
   emID: number;
+  // ngày đang chọn
+  selectedDate: Date;
   // fake dữ liệu
   transactions: Transaction[] = [
     {
@@ -64,9 +66,18 @@ export class WeekReviewComponent implements OnInit {
     return this.transactions.map(t => t.FinalScore).reduce((acc, value) => acc + value, 0);
   }
   /**
+   * chọn ngày
+   */
+  selectDate(date: Date) {
+    this.selectedDate = date;
+    this.clickViewDetail();
+  }
+  /**
    * xem chi tiết công việc trong ngày
    */
   clickViewDetail() {
-    this.taskDialog.open(AddTaskComponent);
+    this.taskDialog.open(AddTaskComponent, {
+      data: { date: this.selectedDate, emID: this.emID }
+    });
   }
 }
