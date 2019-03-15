@@ -21,7 +21,7 @@ export class DayComponent implements OnInit {
   @Input()
   day: Day;
 
-  workStatus: WorkStatus = WorkStatus.AllDay;
+  workStatus: WorkStatus = WorkStatus.NoRegister;
 
   listWorkStatus: Array<WorkStatus> = [WorkStatus.AllDay, WorkStatus.Morning, WorkStatus.Afternoon, WorkStatus.NotWorking];
 
@@ -78,6 +78,9 @@ export class DayComponent implements OnInit {
     if (this.workStatus === WorkStatus.NotWorking) {
       return "Nghỉ"
     }
+    if (this.workStatus === WorkStatus.NoRegister) {
+      return "Chưa đăng kí"
+    }
   }
 
   convertWorkStatusToString(workStatus: WorkStatus) {
@@ -92,6 +95,9 @@ export class DayComponent implements OnInit {
     }
     if (workStatus === WorkStatus.NotWorking) {
       return "Nghỉ"
+    }
+    if (workStatus === WorkStatus.NoRegister) {
+      return "Chưa đăng kí"
     }
     return "";
   }

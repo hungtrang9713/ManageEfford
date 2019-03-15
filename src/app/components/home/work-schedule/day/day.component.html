@@ -2,7 +2,7 @@
   [ngClass]="{'current-day': isCurrentDay, 'day-over': isOver}">
   <div class="header">{{dayText}}</div>
   <div class="center ht-flex-grow ht-flex ht-justify-content-center ht-align-items-center">
-    <span>{{workStatusText}}</span>
+    <span>{{convertWorkStatusToString(workStatus)}}</span>
   </div>
   <div class="bottom">
     <div class="btn-edit">

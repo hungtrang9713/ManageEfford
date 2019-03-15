@@ -1,8 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home.component';
-import { WorkScheduleComponent } from './work-schedule/work-schedule.component';
-import { ManagerPbiComponent } from './manager-pbi/manager-pbi.component';
 
 const routes: Routes = [
   {
