@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-add-task',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./add-task.component.scss']
 })
 export class AddTaskComponent implements OnInit {
-
-  constructor() { }
+  employeeID: number;
+  constructor(private route: ActivatedRoute) { }
 
   ngOnInit() {
+    this.employeeID = this.route.snapshot.params.id;
+    console.log(this.employeeID);
   }
 
 }

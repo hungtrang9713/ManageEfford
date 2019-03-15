@@ -8,18 +8,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { LoginComponent } from './components/login/login.component';
 import { SharedComponentModule } from './shared/components/shared-component.module';
 import { FormsModule } from '@angular/forms';
-import { AddTaskComponent } from './components/task-management/add-task/add-task.component';
-import { ListDeveloperComponent } from './components/task-management/list-developer/list-developer.component';
-import { MatPaginatorModule, MatTableModule, MatInputModule } from '@angular/material';
-import { WeekReviewComponent } from './components/task-management/week-review/week-review.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    AddTaskComponent,
-    ListDeveloperComponent,
-    WeekReviewComponent
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -27,10 +20,7 @@ import { WeekReviewComponent } from './components/task-management/week-review/we
     BrowserAnimationsModule,
     HttpClientModule,
     SharedComponentModule,
-    FormsModule,
-    MatPaginatorModule,
-    MatTableModule,
-    MatInputModule
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
