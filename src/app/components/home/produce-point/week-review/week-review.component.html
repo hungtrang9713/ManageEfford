@@ -1,3 +1,7 @@
+<div class="container-body">
+<h3 class="d-flex justify-content-between">
+	<div>Thống kê năng suất theo tuần</div>
+  </h3>
 <div class="example-container mat-elevation-z8">
 	<table mat-table [dataSource]="transactions">
 		<!-- Week Column -->
@@ -32,4 +36,9 @@
 		<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 		<tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
 	</table>
+</div>
+<div class="d-flex justify-content-center margin-16">
+	<button type="button" class="btn btn-primary" (click)="clickViewDetail()">Xem chi tiết công việc</button>
+</div>
+
 </div>

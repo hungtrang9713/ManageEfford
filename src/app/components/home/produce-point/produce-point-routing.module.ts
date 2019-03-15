@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { ListDeveloperComponent } from './list-developer/list-developer.component';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { ProducePointComponent } from './produce-point.component';
+import { WeekReviewComponent } from './week-review/week-review.component';
 
 const routes: Routes = [
   {
@@ -20,7 +21,7 @@ const routes: Routes = [
       },
       {
         path: 'employee/:id',
-        component: AddTaskComponent
+        component: WeekReviewComponent
       }
     ]
   }

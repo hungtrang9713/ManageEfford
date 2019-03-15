@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { MatDialogRef, MatDialog } from '@angular/material';
+import { AddTaskComponent } from '../add-task/add-task.component';
 
 export interface Transaction {
   Week: number;
@@ -14,7 +17,7 @@ export interface Transaction {
 
 export class WeekReviewComponent implements OnInit {
   displayedColumns = ['Week', 'EffortPoint', 'MinusPoint', 'FinalScore'];
-
+  emID: number;
   transactions: Transaction[] = [
     {
       Week: 1,
@@ -41,9 +44,12 @@ export class WeekReviewComponent implements OnInit {
       FinalScore: 0
     }
   ];
-  constructor() { }
+  constructor(private activatedRoute: ActivatedRoute,
+    public taskDialog: MatDialog
+    ) { }
 
   ngOnInit() {
+    this.emID = this.activatedRoute.snapshot.params.id;
   }
 
   getFinalScore(t: Transaction) {
@@ -54,5 +60,11 @@ export class WeekReviewComponent implements OnInit {
   /** Gets the total cost of all transactions. */
   getTotalScore() {
     return this.transactions.map(t => t.FinalScore).reduce((acc, value) => acc + value, 0);
+  }
+  /**
+   * xem chi tiết công việc trong ngày
+   */
+  clickViewDetail(){
+    this.taskDialog.open(AddTaskComponent);
   }
 }
