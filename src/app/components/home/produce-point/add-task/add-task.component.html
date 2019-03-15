@@ -20,13 +20,9 @@
     </thead>
 
     <tbody>
-      <tr>
+      <tr *ngFor="let task of tasks">
         <td>
           <div class="form-control select-type">
-            <select>
-              <option value="0">UI</option>
-              <option value="1" checked>PBI</option>
-            </select>
             <select>
               <option value="0">297080</option>
               <option value="1" checked>297080</option>
@@ -35,19 +31,19 @@
 
         </td>
         <td>
-          <input type="text" class="form-control" />
+          <input type="text" class="form-control" value="{{task.TaskName}}"/>
         </td>
         <td>
-          <input type="text" class="form-control" />
+          <input type="text" class="form-control" value="{{task.EffortPoint}}"/>
         </td>
         <td>
-          <input type="text" class="form-control" />
+          <input type="text" class="form-control" value="{{task.MinusPoint}}" />
         </td>
         <td>
-          <input class="form-control" type="text" placeholder="Not set" />
+          <input class="form-control" type="text" placeholder="Not set" value="{{task.FinalScore}}" />
         </td>
         <td>
-          <input class="form-control" type="text" placeholder="Not set" />
+          <input class="form-control" type="text" placeholder="Not set" value="{{task.Note}}"/>
         </td>
         <td>
           <button class="btn btn-danger">
@@ -57,4 +53,8 @@
       </tr>
     </tbody>
   </table>
+  <div class="d-flex justify-content-end">
+    <button type="button" class="btn btn-primary right-16">Lưu</button>
+    <button type="button" class="btn btn-danger">Hủy bỏ</button>
+  </div>
 </div>

@@ -16,24 +16,26 @@ export interface Transaction {
 })
 
 export class WeekReviewComponent implements OnInit {
+  // các trường được hiển thị
   displayedColumns = ['Week', 'EffortPoint', 'MinusPoint', 'FinalScore'];
   emID: number;
+  // fake dữ liệu
   transactions: Transaction[] = [
     {
       Week: 1,
       EffortPoint: 30.5,
-      MinusPoint: 0,
+      MinusPoint: 10,
       FinalScore: 0
     },
     {
       Week: 2,
-      EffortPoint: 0,
-      MinusPoint: 0,
+      EffortPoint: 10,
+      MinusPoint: 2,
       FinalScore: 0
     },
     {
       Week: 3,
-      EffortPoint: 0,
+      EffortPoint: 10,
       MinusPoint: 0,
       FinalScore: 0
     },
@@ -46,7 +48,7 @@ export class WeekReviewComponent implements OnInit {
   ];
   constructor(private activatedRoute: ActivatedRoute,
     public taskDialog: MatDialog
-    ) { }
+  ) { }
 
   ngOnInit() {
     this.emID = this.activatedRoute.snapshot.params.id;
@@ -64,7 +66,7 @@ export class WeekReviewComponent implements OnInit {
   /**
    * xem chi tiết công việc trong ngày
    */
-  clickViewDetail(){
+  clickViewDetail() {
     this.taskDialog.open(AddTaskComponent);
   }
 }

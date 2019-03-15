@@ -11,7 +11,17 @@ import { Router } from '@angular/router';
   styleUrls: ['./list-developer.component.scss']
 })
 export class ListDeveloperComponent implements OnInit {
-  public displayedColumns: string[] = ['position', 'name', 'weight', 'col6', 'col7', 'col8', 'col9', 'col10', 'col11'];
+  // danh sách các trường được hiển thị
+  public displayedColumns: string[] = [`Position`,
+    `EmployeeCode`,
+    `EmployeeName`,
+    `Week1`,
+    `Week2`,
+    `Week3`,
+    `Week4`,
+    `TotalScore`,
+    `Note`
+  ];
   public dataSource = new MatTableDataSource<PeriodicElement>(ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
@@ -28,44 +38,32 @@ export class ListDeveloperComponent implements OnInit {
     this.navigator.navigate([`/home/produce-point/employee`, row.id]);
   }
 }
-
+// đối tượng hứng data để đổ ra grid
 export interface PeriodicElement {
-  position: number;
-  name: string;
-  weight: string;
-  col6: string;
-  col7: string;
-  col8: string;
-  col9: string;
-  col10: string;
-  col11: string;
+  Position: number;
+  EmployeeCode: string;
+  EmployeeName: string;
+  Week1: number;
+  Week2: number;
+  Week3: number;
+  Week4: number;
+  TotalScore: number;
+  Note: string;
   id: number;
 }
-
+// fake dữ liệu
 const ELEMENT_DATA: PeriodicElement[] = [
   {
-    position: 1,
-    name: 'B06-2211',
-    weight: 'Nguyễn văn A',
-    col6: '0.00',
-    col7: '0.00',
-    col8: '0.00',
-    col9: '0.00',
-    col10: '0.00',
-    col11: '0.00',
-    id: 1
-  },
-  {
-    position: 2,
-    name: 'B06-0371',
-    weight: 'Nguyễn việt Cường',
-    col6: '0.00',
-    col7: '0.00',
-    col8: '0.00',
-    col9: '0.00',
-    col10: '0.00',
-    col11: '0.00',
-    id: 2
-  },
+    Position: 1,
+    EmployeeCode: `B06-0371`,
+    EmployeeName: `Nvcuong`,
+    Week1: 12,
+    Week2: 13.4,
+    Week3: 14.5,
+    Week4: 16.9,
+    TotalScore: 36.8,
+    Note: ``,
+    id: 1,
+  }
 ];
 
