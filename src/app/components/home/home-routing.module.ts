@@ -21,6 +21,10 @@ const routes: Routes = [
       {
         path: 'manager-pbi',
         loadChildren: './manager-pbi/manager-pbi.module#ManagerPbiModule'
+      },
+      {
+        path: 'produce-point',
+        loadChildren: './produce-point/produce-point.module#ProducePointModule'
       }
     ]
   }

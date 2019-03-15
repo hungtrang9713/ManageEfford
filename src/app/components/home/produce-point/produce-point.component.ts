@@ -10,7 +10,7 @@ export class ProducePointComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    
+
   }
 
 }
