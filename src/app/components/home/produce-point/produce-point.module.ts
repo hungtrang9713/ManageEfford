@@ -6,6 +6,7 @@ import { ProducePointComponent } from './produce-point.component';
 import { MatTableModule, MatPaginatorModule, MatInputModule, MatDialog, MatDialogModule } from '@angular/material';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { WeekReviewComponent } from './week-review/week-review.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { WeekReviewComponent } from './week-review/week-review.component';
     MatTableModule,
     MatPaginatorModule,
     MatInputModule,
-    MatDialogModule
+    MatDialogModule,
+    FormsModule
   ],
   entryComponents: [
     AddTaskComponent

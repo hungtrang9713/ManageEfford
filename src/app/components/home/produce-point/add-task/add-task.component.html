@@ -1,7 +1,7 @@
 <div class="container">
   <h3 class="d-flex justify-content-between">
     <div>Danh sách công việc trong ngày</div>
-    <button class="btn btn-primary pull-right" (click)="addEvent()">
+    <button class="btn btn-primary pull-right" (click)="addTask()">
       Thêm mới
     </button>
   </h3>
@@ -31,30 +31,30 @@
 
         </td>
         <td>
-          <input type="text" class="form-control" value="{{task.TaskName}}"/>
+          <input type="text" class="form-control" [(ngModel)]="task.TaskName"/>
         </td>
         <td>
-          <input type="text" class="form-control" value="{{task.EffortPoint}}"/>
+          <input type="text" class="form-control" [(ngModel)]="task.EffortPoint"/>
         </td>
         <td>
-          <input type="text" class="form-control" value="{{task.MinusPoint}}" />
+          <input type="text" class="form-control" [(ngModel)]="task.MinusPoint" />
         </td>
         <td>
-          <input class="form-control" type="text" placeholder="Not set" value="{{task.FinalScore}}" />
+          <input class="form-control" type="text" placeholder="Not set" [(ngModel)]="task.FinalScore" />
         </td>
         <td>
-          <input class="form-control" type="text" placeholder="Not set" value="{{task.Note}}"/>
+          <input class="form-control" type="text" placeholder="Not set" [(ngModel)]="task.Note"/>
         </td>
         <td>
-          <button class="btn btn-danger">
-            Delete
+          <button class="btn btn-danger" (click)="deleteTask(task)">
+            Xóa
           </button>
         </td>
       </tr>
     </tbody>
   </table>
   <div class="d-flex justify-content-end">
-    <button type="button" class="btn btn-primary right-16">Lưu</button>
-    <button type="button" class="btn btn-danger">Hủy bỏ</button>
+    <button type="button" class="btn btn-primary right-16" (click)="saveData()">Lưu</button>
+    <button type="button" class="btn btn-danger" (click)="cancelDialog()">Hủy bỏ</button>
   </div>
 </div>
