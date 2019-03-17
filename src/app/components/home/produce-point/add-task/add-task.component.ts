@@ -1,7 +1,14 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-import { Working } from '../list-developer/list-developer.component';
-
+export interface Task {
+  ID: string;
+  PBI: number;
+  TaskName: string;
+  EffortPoint: number;
+  MinusPoint: number;
+  FinalScore: number;
+  Note: string;
+}
 @Component({
   selector: 'app-add-task',
   templateUrl: './add-task.component.html',
@@ -12,7 +19,7 @@ export class AddTaskComponent implements OnInit {
   // id hứng từ bản ghi
   ID: number;
   // tạo một mảng quản lý các task
-  tasks: Array<Working> = [];
+  tasks: Array<Task> = [];
   constructor(public dialogRef: MatDialogRef<AddTaskComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any
   ) { }
@@ -20,15 +27,16 @@ export class AddTaskComponent implements OnInit {
   ngOnInit() {
     // fake du lieu
     this.tasks = [{
-      PBIID: '1997',
+      ID: `123`,
+      PBI: 1997,
       TaskName: `Đi học`,
       EffortPoint: 4,
       MinusPoint: 0,
       FinalScore: 4,
       Note: ``
     }, {
-      PBIID: `124`,
-      PBI: '1997',
+      ID: `124`,
+      PBI: 1997,
       TaskName: `Đi ăn`,
       EffortPoint: 4,
       MinusPoint: 0,
@@ -41,8 +49,9 @@ export class AddTaskComponent implements OnInit {
    * hàm thêm mới task
    */
   addTask() {
-    const taskNew: Working = {
-      PBIID: '1997',
+    const taskNew: Task = {
+      ID: `${Math.floor((Math.random() * 100) + 1)}`,
+      PBI: 1997,
       TaskName: ``,
       EffortPoint: 0,
       MinusPoint: 0,
@@ -54,7 +63,7 @@ export class AddTaskComponent implements OnInit {
   /**
    * hàm xóa task
    */
-  deleteTask(task: Working) {
+  deleteTask(task: Task) {
     for (let i = 0; i < this.tasks.length; i++) {
       if (task.ID === this.tasks[i].ID) {
         this.tasks.splice(i, 1);

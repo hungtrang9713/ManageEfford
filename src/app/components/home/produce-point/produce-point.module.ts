@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { ListDeveloperComponent } from './list-developer/list-developer.component';
 import { ProducePointRoutingModule } from './produce-point-routing.module';
 import { ProducePointComponent } from './produce-point.component';
-import { MatTableModule, MatPaginatorModule, MatInputModule, MatDialog, MatDialogModule } from '@angular/material';
+import { MatTableModule, MatPaginatorModule, MatInputModule, MatDialog, MatDialogModule, MatSelectModule } from '@angular/material';
 import { AddTaskComponent } from './add-task/add-task.component';
 import { WeekReviewComponent } from './week-review/week-review.component';
 import { FormsModule } from '@angular/forms';
@@ -28,6 +28,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     MatInputModule,
     MatDialogModule,
     FormsModule,
+    MatSelectModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory

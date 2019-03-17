@@ -3,7 +3,16 @@
 @import '../../../../../assets/scss/urlImage.scss';
 @import '../../../../../assets/scss/style.scss';
 @import "~bootstrap/scss/bootstrap.scss";
-table {
+
+  :host{
+  table {
     width: 100%;
   }
-  
+
+  .row-dev {
+    &:hover{
+      cursor: pointer;
+      background-color: aliceblue;
+    }
+  }
+}
