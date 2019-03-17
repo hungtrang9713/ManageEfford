@@ -14,14 +14,14 @@
 		<!-- EffortPoint Column -->
 		<ng-container matColumnDef="EffortPoint">
 			<th mat-header-cell *matHeaderCellDef> Điểm năng suất </th>
-			<td mat-cell *matCellDef="let transaction"><input type="text" class="form-control" value="{{transaction.EffortPoint}}"></td>
+			<td mat-cell *matCellDef="let transaction"><input type="text" class="form-control" disabled value="{{transaction.EffortPoint}}"></td>
       <td mat-footer-cell *matFooterCellDef></td>
 		</ng-container>
 
 		<!-- MinusPoint Column -->
 		<ng-container matColumnDef="MinusPoint">
 			<th mat-header-cell *matHeaderCellDef> Điểm trừ </th>
-			<td mat-cell *matCellDef="let transaction"><input class="form-control" value="{{transaction.MinusPoint}}"></td>
+			<td mat-cell *matCellDef="let transaction"><input disabled class="form-control" value="{{transaction.MinusPoint}}"></td>
       <td mat-footer-cell *matFooterCellDef></td>
 		</ng-container>
 

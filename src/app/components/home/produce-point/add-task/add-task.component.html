@@ -1,7 +1,7 @@
 <div class="container">
   <h3 class="d-flex justify-content-between">
     <div>Danh sách công việc trong ngày</div>
-    <button class="btn btn-primary pull-right" (click)="addEvent()">
+    <button class="btn btn-primary pull-right" (click)="addTask()">
       Thêm mới
     </button>
   </h3>
@@ -20,13 +20,9 @@
     </thead>
 
     <tbody>
-      <tr>
+      <tr *ngFor="let task of tasks">
         <td>
           <div class="form-control select-type">
-            <select>
-              <option value="0">UI</option>
-              <option value="1" checked>PBI</option>
-            </select>
             <select>
               <option value="0">297080</option>
               <option value="1" checked>297080</option>
@@ -35,26 +31,30 @@
 
         </td>
         <td>
-          <input type="text" class="form-control" />
+          <input type="text" class="form-control" [(ngModel)]="task.TaskName"/>
         </td>
         <td>
-          <input type="text" class="form-control" />
+          <input type="text" class="form-control" [(ngModel)]="task.EffortPoint"/>
         </td>
         <td>
-          <input type="text" class="form-control" />
+          <input type="text" class="form-control" [(ngModel)]="task.MinusPoint" />
         </td>
         <td>
-          <input class="form-control" type="text" placeholder="Not set" />
+          <input class="form-control" type="text" placeholder="Not set" [(ngModel)]="task.FinalScore" />
         </td>
         <td>
-          <input class="form-control" type="text" placeholder="Not set" />
+          <input class="form-control" type="text" placeholder="Not set" [(ngModel)]="task.Note"/>
         </td>
         <td>
-          <button class="btn btn-danger">
-            Delete
+          <button class="btn btn-danger" (click)="deleteTask(task)">
+            Xóa
           </button>
         </td>
       </tr>
     </tbody>
   </table>
+  <div class="d-flex justify-content-end">
+    <button type="button" class="btn btn-primary right-16" (click)="saveData()">Lưu</button>
+    <button type="button" class="btn btn-danger" (click)="cancelDialog()">Hủy bỏ</button>
+  </div>
 </div>
