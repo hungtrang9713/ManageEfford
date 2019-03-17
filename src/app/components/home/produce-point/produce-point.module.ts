@@ -7,13 +7,18 @@ import { MatTableModule, MatPaginatorModule, MatInputModule, MatDialog, MatDialo
 import { AddTaskComponent } from './add-task/add-task.component';
 import { WeekReviewComponent } from './week-review/week-review.component';
 import { FormsModule } from '@angular/forms';
+import { CalendarComponent } from './calendar/calendar.component';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+
 
 @NgModule({
   declarations: [
     ListDeveloperComponent,
     ProducePointComponent,
     AddTaskComponent,
-    WeekReviewComponent
+    WeekReviewComponent,
+    CalendarComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +27,11 @@ import { FormsModule } from '@angular/forms';
     MatPaginatorModule,
     MatInputModule,
     MatDialogModule,
-    FormsModule
+    FormsModule,
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory
+    })
   ],
   entryComponents: [
     AddTaskComponent

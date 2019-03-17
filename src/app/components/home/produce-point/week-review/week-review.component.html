@@ -37,8 +37,8 @@
 		<tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
 	</table>
 </div>
-<div class="d-flex justify-content-center margin-16">
-	<button type="button" class="btn btn-primary" (click)="clickViewDetail()">Xem chi tiết công việc</button>
-</div>
+<hr>
+<app-calendar (date)="selectDate($event)"></app-calendar>
+<hr>
 
 </div>
