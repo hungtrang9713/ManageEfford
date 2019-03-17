@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 import { MatDialog } from '@angular/material';
 
 @Component({
@@ -9,8 +9,7 @@ import { MatDialog } from '@angular/material';
 export class CalendarComponent implements OnInit {
 
   title = 'crm-job-booking';
-
-  viewDate: Date = new Date();
+  @Input() viewDate: Date;
   @Output() date: EventEmitter<any> = new EventEmitter<any>();
 
   constructor(public dialog: MatDialog) {
