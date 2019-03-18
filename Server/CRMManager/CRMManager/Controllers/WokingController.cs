@@ -1,4 +1,4 @@
-﻿using MISA.CRM.Models;
+using MISA.CRM.Models;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -46,6 +46,5 @@ namespace MISA.CRM.Controllers
 
             return result;
         }
-
     }
 }

@@ -13,6 +13,8 @@ export class WorkScheduleComponent implements OnInit {
   currentTime: any;
 
   selectedWeekNumber: number = 0;
+  mondayWeekSelected = moment().weekday(1 + this.selectedWeekNumber*7).format("DD/MM/YYYY");
+  saturdayWeekSelected = moment().weekday(6 + this.selectedWeekNumber*7).format("DD/MM/YYYY");
 
   ngOnInit() {
     this.currentTime = moment();

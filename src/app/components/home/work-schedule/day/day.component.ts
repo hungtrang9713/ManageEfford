@@ -2,6 +2,13 @@ import { Component, OnInit, Input } from '@angular/core';
 import { Day } from 'src/app/shared/enums/day';
 import { WorkStatus } from 'src/app/shared/enums/work-status';
 import * as moment from 'moment'
+import { HttpClient } from '@angular/common/http';
+
+class JobBooking {
+  UserID: string;
+  Date: Date;
+  WorkingState: number
+}
 
 @Component({
   selector: 'app-day',
@@ -10,16 +17,31 @@ import * as moment from 'moment'
 })
 export class DayComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private http: HttpClient
+  ) { }
 
   ngOnInit() {
   }
 
+  private _week: number;
+
+  get week(): number {
+    return this._week;
+  };
+
   @Input()
-  week: Number;
+  set week(week: number) {
+    this._week = week;
+    this.getData();
+  }
 
   @Input()
   day: Day;
+
+  get date(): Date {
+    return moment().weekday(this.day + this.week*7).toDate();
+  }
 
   workStatus: WorkStatus = WorkStatus.NoRegister;
 
@@ -104,5 +126,22 @@ export class DayComponent implements OnInit {
 
   setWorkStatus(workStatus) {
     this.workStatus = workStatus;
+    this.saveToDB();
   }
+
+  saveToDB() {
+    let jobBooking: JobBooking = {
+      Date: this.date,
+      UserID: "4d7cbe29-eca7-49d4-ab2f-b968fe8d4490",
+      WorkingState: this.workStatus
+    }
+    this.http.post("http://localhost:50999/JobBooking", jobBooking).subscribe(res => {
+
+    })
+  }
+
+  getData() {
+    
+  }
+
 }
