@@ -37,10 +37,10 @@
           <input class="form-control" disabled [value]="getFinalScore(task)" />
         </td>
         <td>
-          <input class="form-control" type="text" style="min-width:150px" [(ngModel)]="task.Note"/>
+          <input class="form-control" type="text" placeholder="enter để thêm mới" style="min-width:150px" [(ngModel)]="task.Note" (keydown.enter)="addTask()"/>
         </td>
         <td>
-          <button class="btn btn-danger" (click)="deleteTask(task)">
+          <button class="btn btn-danger" (click)="deleteTask(task)" (keydown.tab)="addTask()">
             Xóa
           </button>
         </td>
