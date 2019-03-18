@@ -1,0 +1,91 @@
+{
+	"variables": [],
+	"info": {
+		"name": "CRM Manager",
+		"_postman_id": "e401220d-8db5-7818-d71c-b7a25ec8515e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Thêm/Sửa/Xóa task",
+			"request": {
+				"url": "http://localhost:55465/task/list",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\"PBI\":\"1234\",\n\t\"TaskName\":\"Danh sách liên hệ\",\n\t\"EffortScore\":\"7.5\",\n\t\"MinusScore\": \"0.5\",\n\t\"FinalScore\": \"7\",\n\t\"UserID\": \"C80D12B4-C08E-42C4-98A6-94D7351D885E\",\n\t\"Week\": 2,\n\t\"State\": 1\n\t},\n\t{\n\t\"PBI\":\"1234\",\n\t\"TaskName\":\"Danh sách liên hệ\",\n\t\"EffortScore\":\"7.5\",\n\t\"MinusScore\": \"0.5\",\n\t\"FinalScore\": \"7\",\n\t\"UserID\": \"C80D12B4-C08E-42C4-98A6-94D7351D885E\",\n\t\"Week\": 2,\n\t\"State\": 2\n\t}\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Thêm mới user",
+			"request": {
+				"url": "http://localhost:55465/user/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"UserName\": \"nvcuong\",\n\t\"FullName\":\"Nguyễn Việt Cường\",\n\t\"State\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Tổng hợp theo tháng",
+			"request": {
+				"url": "http://localhost:55465/task/3/2019",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"FromDate\": \"2019-03-14T09:41:44.600Z\",\n\t\"ToDate\": \"2019-03-16T09:41:44.600Z\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Tổng hợp theo tuần",
+			"request": {
+				"url": "http://localhost:55465/task/3/2019/C80D12B4-C08E-42C4-98A6-94D7351D885E",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"FromDate\": \"2019-03-14T09:41:44.600Z\",\n\t\"ToDate\": \"2019-03-16T09:41:44.600Z\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

@@ -20,7 +20,7 @@ const routes: Routes = [
         component: ListDeveloperComponent
       },
       {
-        path: 'employee/:id',
+        path: 'employee/:id/:month/:year',
         component: WeekReviewComponent
       }
     ]

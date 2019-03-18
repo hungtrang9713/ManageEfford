@@ -1,44 +1,61 @@
 <div class="container-body">
-<h3 class="d-flex justify-content-between">
-	<div>Thống kê năng suất theo tuần</div>
-  </h3>
-<div class="example-container mat-elevation-z8">
-	<table mat-table [dataSource]="transactions">
-		<!-- Week Column -->
-		<ng-container matColumnDef="Week">
-			<th mat-header-cell *matHeaderCellDef> Tuần </th>
-			<td mat-cell *matCellDef="let transaction"> {{transaction.Week}} </td>
-			<td mat-footer-cell *matFooterCellDef> Tổng điểm </td>
-		</ng-container>
+  <div class="d-flex justify-content-between align-items-center">
+    <h3 class="right-16 justify-content-center">Thống kê năng suất theo tuần</h3>
+    <div class="d-flex align-items-center">
+				<mat-form-field class="right-16">
+					<mat-select #iyear [value]="yearSelected">
+						<ng-container *ngFor="let year of years">
+								<mat-option [value]="year">Năm {{year}}</mat-option>
+						</ng-container>
+					</mat-select>
+				</mat-form-field>
+				<mat-form-field class="right-16">
+						<mat-select #imonth [value]="monthSelected">
+							<ng-container *ngFor="let month of months">
+									<mat-option [value]="month">Tháng {{month}}</mat-option>
+							</ng-container>
+						</mat-select>
+					</mat-form-field>
+					<button type="button" class="btn btn-success" (click)="getDataByDate(iyear.value,imonth.value)">Lấy dữ liệu</button>
+			</div>
+  </div>
+  <div class="example-container mat-elevation-z8">
+    <table mat-table [dataSource]="transactions">
+      <!-- Week Column -->
+      <ng-container matColumnDef="Week">
+        <th mat-header-cell *matHeaderCellDef> Tuần </th>
+        <td mat-cell *matCellDef="let transaction"> {{transaction.Week}} </td>
+        <td mat-footer-cell *matFooterCellDef> Tổng điểm </td>
+      </ng-container>
 
-		<!-- EffortPoint Column -->
-		<ng-container matColumnDef="EffortPoint">
-			<th mat-header-cell *matHeaderCellDef> Điểm năng suất </th>
-			<td mat-cell *matCellDef="let transaction"><input type="text" class="form-control" value="{{transaction.EffortPoint}}"></td>
-      <td mat-footer-cell *matFooterCellDef></td>
-		</ng-container>
+      <!-- EffortPoint Column -->
+      <ng-container matColumnDef="EffortPoint">
+        <th mat-header-cell *matHeaderCellDef> Điểm năng suất </th>
+        <td mat-cell *matCellDef="let transaction">{{transaction.EffortPoint}}</td>
+        <td mat-footer-cell *matFooterCellDef></td>
+      </ng-container>
 
-		<!-- MinusPoint Column -->
-		<ng-container matColumnDef="MinusPoint">
-			<th mat-header-cell *matHeaderCellDef> Điểm trừ </th>
-			<td mat-cell *matCellDef="let transaction"><input class="form-control" value="{{transaction.MinusPoint}}"></td>
-      <td mat-footer-cell *matFooterCellDef></td>
-		</ng-container>
+      <!-- MinusPoint Column -->
+      <ng-container matColumnDef="MinusPoint">
+        <th mat-header-cell *matHeaderCellDef> Điểm trừ </th>
+        <td mat-cell *matCellDef="let transaction">{{transaction.MinusPoint}}</td>
+        <td mat-footer-cell *matFooterCellDef></td>
+      </ng-container>
 
-		<!-- finalScore Column -->
-		<ng-container matColumnDef="FinalScore">
-			<th mat-header-cell *matHeaderCellDef> Điểm ghi nhận </th>
-			<td mat-cell *matCellDef="let transaction"><input type="text" class="form-control" value="{{getFinalScore(transaction)}}" disabled></td>
-      <td mat-footer-cell *matFooterCellDef>{{getTotalScore()}}</td>
-		</ng-container>
+      <!-- finalScore Column -->
+      <ng-container matColumnDef="FinalScore">
+        <th mat-header-cell *matHeaderCellDef> Điểm ghi nhận </th>
+        <td mat-cell *matCellDef="let transaction">{{getFinalScore(transaction)}}</td>
+        <td mat-footer-cell *matFooterCellDef>{{getTotalScore()}}</td>
+      </ng-container>
 
-		<tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
-		<tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-		<tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
-	</table>
-</div>
-<div class="d-flex justify-content-center margin-16">
-	<button type="button" class="btn btn-primary" (click)="clickViewDetail()">Xem chi tiết công việc</button>
-</div>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns; sticky: true"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr mat-footer-row *matFooterRowDef="displayedColumns; sticky: true"></tr>
+    </table>
+  </div>
+  <hr>
+  <app-calendar [viewDate]="getDate()" (date)="selectDate($event)"></app-calendar>
+  <hr>
 
 </div>
