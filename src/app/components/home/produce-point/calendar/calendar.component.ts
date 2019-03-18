@@ -17,6 +17,7 @@ export class CalendarComponent implements OnInit {
   }
 
   ngOnInit() {
+    console.log(this.viewDate);
   }
 
 

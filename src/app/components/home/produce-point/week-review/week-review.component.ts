@@ -82,13 +82,15 @@ export class WeekReviewComponent implements OnInit {
    */
   getDate(): Date {
     const day = new Date().getDay();
-    const date = new Date(this.yearSelected, this.monthSelected, day);
+    const date = new Date(this.yearSelected, this.monthSelected - 1, day);
     return date;
   }
   /**
    * lấy data theo tháng, năm đã chọn
    */
-  getDataByDate(){
+  getDataByDate(year, month) {
+    this.yearSelected = year;
+    this.monthSelected = month;
     // gọi service
   }
   /**

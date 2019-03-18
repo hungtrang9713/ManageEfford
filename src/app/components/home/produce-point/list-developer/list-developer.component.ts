@@ -2,6 +2,8 @@ import { Component, OnInit, ViewChild } from '@angular/core';
 import { MatPaginator, MatTableDataSource } from '@angular/material';
 import { Router } from '@angular/router';
 import { CalendarTodayDirective } from 'angular-calendar/modules/common/calendar-today.directive';
+import { Month } from 'src/app/shared/array/moth';
+import { Year } from 'src/app/shared/array/year';
 
 /**
  * @title Table with pagination
@@ -13,8 +15,8 @@ import { CalendarTodayDirective } from 'angular-calendar/modules/common/calendar
 })
 export class ListDeveloperComponent implements OnInit {
   today = new Date();
-  years: Array<number> = [2018, 2019, 2020];
-  months: Array<number> = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  years: Array<number> = Year;
+  months: Array<number> = Month;
   // chọn năm
   yearSelected = this.today.getFullYear();
   // lấy thời điểm hiện tại
@@ -49,8 +51,14 @@ export class ListDeveloperComponent implements OnInit {
   /**
    * hàm lấy chi tiết nhân viên theo thánng
    */
-  getDataByDate(){
+  getDataByDate() {
     // gọi api
+  }
+  /**
+   * thêm mới user
+   */
+  addEvent() {
+    //do smt
   }
 }
 // đối tượng hứng data để đổ ra grid

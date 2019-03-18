@@ -3,20 +3,20 @@
     <h3 class="right-16 justify-content-center">Thống kê năng suất theo tuần</h3>
     <div class="d-flex align-items-center">
 				<mat-form-field class="right-16">
-					<mat-select [(value)]="yearSelected">
+					<mat-select #iyear [value]="yearSelected">
 						<ng-container *ngFor="let year of years">
 								<mat-option [value]="year">Năm {{year}}</mat-option>
 						</ng-container>
 					</mat-select>
 				</mat-form-field>
 				<mat-form-field class="right-16">
-						<mat-select [(value)]="monthSelected">
+						<mat-select #imonth [value]="monthSelected">
 							<ng-container *ngFor="let month of months">
 									<mat-option [value]="month">Tháng {{month}}</mat-option>
 							</ng-container>
 						</mat-select>
 					</mat-form-field>
-					<button type="button" class="btn btn-success" (click)="getDataByDate()">Lấy dữ liệu</button>
+					<button type="button" class="btn btn-success" (click)="getDataByDate(iyear.value,imonth.value)">Lấy dữ liệu</button>
 			</div>
   </div>
   <div class="example-container mat-elevation-z8">
