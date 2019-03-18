@@ -9,7 +9,7 @@
   <table class="table table-bordered">
     <thead>
       <tr>
-        <th>Loại công việc</th>
+        <th>PBI</th>
         <th>Tên công việc</th>
         <th>Điểm năng suất</th>
         <th>Điểm phạt</th>
@@ -22,34 +22,37 @@
     <tbody>
       <tr *ngFor="let task of tasks">
         <td>
-          <div class="form-control select-type">
-            <select>
-              <option value="0">297080</option>
-              <option value="1" checked>297080</option>
-            </select>
-          </div>
-
+            <input type="text" style="min-width:80px" class="form-control" [(ngModel)]="task.PBI">
         </td>
         <td>
-          <input type="text" class="form-control" [(ngModel)]="task.TaskName"/>
+          <input type="text" class="form-control" style="min-width:300px" [(ngModel)]="task.TaskName" placeholder="Nhập tên công việc vào đây"/>
         </td>
         <td>
-          <input type="text" class="form-control" [(ngModel)]="task.EffortPoint"/>
+          <input type="text" class="form-control" [(ngModel)]="task.EffortScore"/>
         </td>
         <td>
-          <input type="text" class="form-control" [(ngModel)]="task.MinusPoint" />
+          <input type="text" class="form-control" [(ngModel)]="task.MinusScore" />
         </td>
         <td>
-          <input class="form-control" type="text" placeholder="Not set" [(ngModel)]="task.FinalScore" />
+          <input class="form-control" disabled [value]="getFinalScore(task)" />
         </td>
         <td>
-          <input class="form-control" type="text" placeholder="Not set" [(ngModel)]="task.Note"/>
+          <input class="form-control" type="text" style="min-width:150px" [(ngModel)]="task.Note"/>
         </td>
         <td>
           <button class="btn btn-danger" (click)="deleteTask(task)">
             Xóa
           </button>
         </td>
+      </tr>
+      <tr>
+        <td>Tổng điểm</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td class="d-flex align-items-center justify-content-center">{{getTotalScore()}}</td>
+        <td></td>
+        <td></td>
       </tr>
     </tbody>
   </table>

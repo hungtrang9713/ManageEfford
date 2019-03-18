@@ -1,14 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
-export interface Task {
-  ID: string;
-  PBI: number;
-  TaskName: string;
-  EffortPoint: number;
-  MinusPoint: number;
-  FinalScore: number;
-  Note: string;
-}
+import { Task } from 'src/app/shared/models/Task';
 @Component({
   selector: 'app-add-task',
   templateUrl: './add-task.component.html',
@@ -25,39 +17,15 @@ export class AddTaskComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // fake du lieu
-    this.tasks = [{
-      ID: `123`,
-      PBI: 1997,
-      TaskName: `Đi học`,
-      EffortPoint: 4,
-      MinusPoint: 0,
-      FinalScore: 4,
-      Note: ``
-    }, {
-      ID: `124`,
-      PBI: 1997,
-      TaskName: `Đi ăn`,
-      EffortPoint: 4,
-      MinusPoint: 0,
-      FinalScore: 4,
-      Note: `chậm trể`
-    }];
     console.log(`ID: ${this.data.emID} và ngày : ${this.data.date}`);
+    const taskNew = new Task(1, 2, this.data.date);
+    this.tasks.push(taskNew);
   }
   /**
    * hàm thêm mới task
    */
   addTask() {
-    const taskNew: Task = {
-      ID: `${Math.floor((Math.random() * 100) + 1)}`,
-      PBI: 1997,
-      TaskName: ``,
-      EffortPoint: 0,
-      MinusPoint: 0,
-      FinalScore: 0,
-      Note: ``
-    };
+    const taskNew = new Task(1, 2, this.data.date);
     this.tasks.push(taskNew);
   }
   /**
@@ -65,11 +33,20 @@ export class AddTaskComponent implements OnInit {
    */
   deleteTask(task: Task) {
     for (let i = 0; i < this.tasks.length; i++) {
-      if (task.ID === this.tasks[i].ID) {
+      if (task.TaskID === this.tasks[i].TaskID) {
         this.tasks.splice(i, 1);
         break;
       }
     }
+  }
+  /**hàm get điểm ghi nhận */
+  getFinalScore(t: Task) {
+    t.FinalScore = t.EffortScore - t.MinusScore;
+    return t.FinalScore;
+  }
+  /** Gets the total cost of all tasks. */
+  getTotalScore() {
+    return this.tasks.map(t => t.FinalScore).reduce((acc, value) => acc + value, 0);
   }
   /**
    * hàm lưu công việc
