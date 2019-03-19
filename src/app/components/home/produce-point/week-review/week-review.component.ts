@@ -1,14 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MatDialogRef, MatDialog } from '@angular/material';
 import { AddTaskComponent } from '../add-task/add-task.component';
 import { Month } from 'src/app/shared/array/moth';
 import { Year } from 'src/app/shared/array/year';
+import { Subscription } from 'rxjs';
+import { TaskService } from 'src/app/shared/services/task/task.service';
 
 export interface Transaction {
   Week: number;
-  EffortPoint: number;
-  MinusPoint: number;
+  EffortScore: number;
+  MinusScore: number;
   FinalScore: number;
 }
 @Component({
@@ -17,9 +19,9 @@ export interface Transaction {
   styleUrls: ['./week-review.component.scss']
 })
 
-export class WeekReviewComponent implements OnInit {
+export class WeekReviewComponent implements OnInit, OnDestroy {
   // các trường được hiển thị
-  displayedColumns = ['Week', 'EffortPoint', 'MinusPoint', 'FinalScore'];
+  displayedColumns = ['Week', 'EffortScore', 'MinusScore', 'FinalScore'];
   emID: number;
   // list tháng năm
   months = Month;
@@ -29,35 +31,39 @@ export class WeekReviewComponent implements OnInit {
   yearSelected: number;
   // ngày đang chọn
   selectedDate: Date;
+  // subcription
+  subcription: Array<Subscription> = [];
   // fake dữ liệu
   transactions: Transaction[] = [
     {
       Week: 1,
-      EffortPoint: 30.5,
-      MinusPoint: 10,
+      EffortScore: 0,
+      MinusScore: 0,
       FinalScore: 0
     },
     {
       Week: 2,
-      EffortPoint: 10,
-      MinusPoint: 2,
+      EffortScore: 0,
+      MinusScore: 0,
       FinalScore: 0
     },
     {
       Week: 3,
-      EffortPoint: 10,
-      MinusPoint: 0,
+      EffortScore: 0,
+      MinusScore: 0,
       FinalScore: 0
     },
     {
       Week: 4,
-      EffortPoint: 0,
-      MinusPoint: 0,
+      EffortScore: 0,
+      MinusScore: 0,
       FinalScore: 0
     }
   ];
+  //#region life cycle
   constructor(private activatedRoute: ActivatedRoute,
-    public taskDialog: MatDialog
+    public taskDialog: MatDialog,
+    private taskSV: TaskService
   ) { }
 
   ngOnInit() {
@@ -66,10 +72,69 @@ export class WeekReviewComponent implements OnInit {
     this.monthSelected = parseInt(this.activatedRoute.snapshot.params.month);
     // tslint:disable-next-line:radix
     this.yearSelected = parseInt(this.activatedRoute.snapshot.params.year);
+    // get dữ liệu
+    this.getDataWeek(this.monthSelected, this.yearSelected, this.emID);
   }
-
+  ngOnDestroy() {
+    this.subcription.forEach(sub => {
+      sub.unsubscribe();
+    });
+  }
+  //#region function
+  /**
+   * 
+   * @param m tháng
+   * @param y năm
+   * @param id UserID
+   */
+  getDataWeek(m, y, id) {
+    const dataWeekSub = this.taskSV.getDataWeek(m, y, id).subscribe(data => {
+      this.resetData();
+      for (let i = 0; i < data.length; i++) {
+        this.transactions[i].EffortScore = data[i].EffortScore;
+        this.transactions[i].MinusScore = data[i].MinusScore;
+        this.transactions[i].FinalScore = data[i].FinalScore;
+      }
+    });
+    this.subcription.push(dataWeekSub);
+  }
+  /**
+   * hàm reset data khi load lại dữ liệu
+   */
+  resetData(){
+    this.transactions = [
+      {
+        Week: 1,
+        EffortScore: 0,
+        MinusScore: 0,
+        FinalScore: 0
+      },
+      {
+        Week: 2,
+        EffortScore: 0,
+        MinusScore: 0,
+        FinalScore: 0
+      },
+      {
+        Week: 3,
+        EffortScore: 0,
+        MinusScore: 0,
+        FinalScore: 0
+      },
+      {
+        Week: 4,
+        EffortScore: 0,
+        MinusScore: 0,
+        FinalScore: 0
+      }
+    ];
+  }
+  /**
+   * tính điểm ghi nhận
+   * @param đối tượng hàng
+   */
   getFinalScore(t: Transaction) {
-    t.FinalScore = t.EffortPoint - t.MinusPoint;
+    t.FinalScore = t.EffortScore - t.MinusScore;
     return t.FinalScore;
 
   }
@@ -92,6 +157,7 @@ export class WeekReviewComponent implements OnInit {
     this.yearSelected = year;
     this.monthSelected = month;
     // gọi service
+    this.getDataWeek(month, year, this.emID);
   }
   /**
    * chọn ngày
