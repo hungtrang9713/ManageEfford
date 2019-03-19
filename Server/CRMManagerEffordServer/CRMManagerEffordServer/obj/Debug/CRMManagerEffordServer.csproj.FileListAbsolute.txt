@@ -150,3 +150,6 @@ C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMM
 C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.csprojResolveAssemblyReference.cache
 C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.dll
 C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.pdb
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Cors.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.Cors.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.Cors.xml
