@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import {A11yModule} from '@angular/cdk/a11y';
 import { CommonModule } from '@angular/common';
 import { ListDeveloperComponent } from './list-developer/list-developer.component';
 import { ProducePointRoutingModule } from './produce-point-routing.module';
@@ -29,6 +30,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     MatDialogModule,
     FormsModule,
     MatSelectModule,
+    A11yModule,
     CalendarModule.forRoot({
       provide: DateAdapter,
       useFactory: adapterFactory

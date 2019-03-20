@@ -20,9 +20,9 @@
     </thead>
 
     <tbody>
-      <tr *ngFor="let task of tasks">
+      <tr *ngFor="let task of tasks" [ngClass]="{'task-deleted': task.Deleted}">
         <td>
-            <input type="text" style="min-width:80px" class="form-control" [(ngModel)]="task.PBI">
+            <input cdkFocusInitial type="text" style="min-width:80px" class="form-control" [(ngModel)]="task.PBI">
         </td>
         <td>
           <input type="text" class="form-control" style="min-width:300px" [(ngModel)]="task.TaskName" placeholder="Nhập tên công việc vào đây"/>
@@ -40,7 +40,7 @@
           <input class="form-control" type="text" placeholder="enter để thêm mới" style="min-width:150px" [(ngModel)]="task.Note" (keydown.enter)="addTask()"/>
         </td>
         <td>
-          <button class="btn btn-danger" (click)="deleteTask(task)" (keydown.tab)="addTask()">
+          <button class="btn btn-danger" (click)="deleteTask(task)">
             Xóa
           </button>
         </td>
@@ -56,8 +56,8 @@
       </tr>
     </tbody>
   </table>
-  <div class="d-flex justify-content-end">
+  <div class="d-flex justify-content-end" mat-dialog-actions>
     <button type="button" class="btn btn-danger right-16" (click)="cancelDialog()">Hủy bỏ</button>
-    <button type="button" class="btn btn-primary " (click)="saveData()">Lưu</button>
+    <button mat-button type="button" class="btn btn-primary " (click)="saveData()" [mat-dialog-close]="'dữ liệu từ dialog'">Lưu</button>
   </div>
 </div>

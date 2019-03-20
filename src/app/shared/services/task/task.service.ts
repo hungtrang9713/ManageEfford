@@ -33,7 +33,7 @@ export class TaskService {
    * hàm lấy dữ liệu tasks theo ngày đối với 1 user
    */
   getDataDay(dateWorking, userID): Observable<any> {
-    return this.http.get<any>(`${this.API_URL}/${dateWorking}/${userID}`);
+    return this.http.get<any>(`${this.API_URL}/day/${dateWorking}/${userID}`);
   }
   /**
    * các hàm xử lý api
