@@ -76,7 +76,6 @@ export class ListDeveloperComponent implements OnInit, OnDestroy {
    * hàm xử lý khi xem chi tiết nv
    */
   clickRow(row) {
-    console.log(row);
     this.navigator.navigate([`/home/produce-point/employee`, row.UserID, this.monthSelected, this.yearSelected]);
   }
   /**

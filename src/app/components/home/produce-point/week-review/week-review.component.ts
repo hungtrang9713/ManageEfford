@@ -91,9 +91,10 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
     const dataWeekSub = this.taskSV.getDataWeek(m, y, id).subscribe(data => {
       this.resetData();
       for (let i = 0; i < data.length; i++) {
-        this.transactions[i].EffortScore = data[i].EffortScore;
-        this.transactions[i].MinusScore = data[i].MinusScore;
-        this.transactions[i].FinalScore = data[i].FinalScore;
+        let weekNum = data[i].Week;
+        this.transactions[weekNum - 1].EffortScore = data[i].EffortScore;
+        this.transactions[weekNum - 1].MinusScore = data[i].MinusScore;
+        this.transactions[weekNum - 1].FinalScore = data[i].FinalScore;
       }
     });
     this.subcription.push(dataWeekSub);
@@ -101,7 +102,7 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
   /**
    * hàm reset data khi load lại dữ liệu
    */
-  resetData(){
+  resetData() {
     this.transactions = [
       {
         Week: 1,
@@ -170,8 +171,12 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
    * xem chi tiết công việc trong ngày
    */
   clickViewDetail() {
-    this.taskDialog.open(AddTaskComponent, {
+    const dialogRef = this.taskDialog.open(AddTaskComponent, {
       data: { date: this.selectedDate, emID: this.emID }
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      // get lại dữ liệu
+      this.getDataWeek(this.monthSelected, this.yearSelected, this.emID);
     });
   }
 }

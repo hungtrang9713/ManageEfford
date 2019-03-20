@@ -12,9 +12,9 @@ export class Task {
     ModifiedDate?: Date;
     UserID: string;
     Week: number;
-    DateWorking: Date;
+    DateWorking: any;
     State: number;
-
+    Deleted?: Boolean;
     constructor(UserID, Week, DateData) {
         this.TaskName = ``;
         this.EffortScore = 0;
@@ -26,5 +26,6 @@ export class Task {
         this.Note = ``;
         this.PBI = ``;
         this.State = ActionState.Add;
+        this.Deleted = false;
     }
 }
