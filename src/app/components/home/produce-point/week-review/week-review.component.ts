@@ -6,6 +6,7 @@ import { Month } from 'src/app/shared/array/moth';
 import { Year } from 'src/app/shared/array/year';
 import { Subscription } from 'rxjs';
 import { TaskService } from 'src/app/shared/services/task/task.service';
+import { NotifierService } from 'angular-notifier';
 
 export interface Transaction {
   Week: number;
@@ -20,6 +21,7 @@ export interface Transaction {
 })
 
 export class WeekReviewComponent implements OnInit, OnDestroy {
+  private readonly notifier: NotifierService;
   // các trường được hiển thị
   displayedColumns = ['Week', 'EffortScore', 'MinusScore', 'FinalScore'];
   emID: number;
@@ -63,8 +65,9 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
   //#region life cycle
   constructor(private activatedRoute: ActivatedRoute,
     public taskDialog: MatDialog,
-    private taskSV: TaskService
-  ) { }
+    private taskSV: TaskService,
+    notifierService: NotifierService
+  ) { this.notifier = notifierService; }
 
   ngOnInit() {
     this.emID = this.activatedRoute.snapshot.params.id;
@@ -96,6 +99,7 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
         this.transactions[weekNum - 1].MinusScore = data[i].MinusScore;
         this.transactions[weekNum - 1].FinalScore = data[i].FinalScore;
       }
+      this.notifier.notify('success', 'lấy dữ liệu thành công');
     });
     this.subcription.push(dataWeekSub);
   }
@@ -176,7 +180,19 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
     });
     dialogRef.afterClosed().subscribe(result => {
       // get lại dữ liệu
-      this.getDataWeek(this.monthSelected, this.yearSelected, this.emID);
+      if (result) {
+        this.getDataWeek(this.monthSelected, this.yearSelected, this.emID);
+        this.notifier.notify('success', 'Lưu thành công');
+      }
     });
+  }
+  /**
+ * Show a notification
+ *
+ * @param {string} type    Notification type
+ * @param {string} message Notification message
+ */
+  public showNotification(type: string, message: string): void {
+    this.notifier.notify(type, message);
   }
 }
