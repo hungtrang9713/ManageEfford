@@ -19,7 +19,6 @@ export class AddTaskComponent implements OnInit, OnDestroy {
   tasks: Array<Task> = [];
 
   subscription: Array<Subscription> = [];
-  @Output() updateWeekData = new EventEmitter<any>();
   //#region life cycle
   constructor(public dialogRef: MatDialogRef<AddTaskComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
@@ -123,12 +122,10 @@ export class AddTaskComponent implements OnInit, OnDestroy {
         // call service here
         const updateDatasub = this.taskSV.updateDataTask(this.tasks).subscribe(data => {
           if (data) {
-            console.log('success!');
-            this.updateWeekData.emit();
+            this.dialogRef.close(true);
           }
         });
         this.subscription.push(updateDatasub);
-        this.dialogRef.close();
       } else {
         alert('Tên Công việc không được để trống');
       }
@@ -136,6 +133,6 @@ export class AddTaskComponent implements OnInit, OnDestroy {
   }
   // đóng dialog
   cancelDialog() {
-    this.dialogRef.close();
+    this.dialogRef.close(false);
   }
 }
