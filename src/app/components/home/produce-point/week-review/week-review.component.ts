@@ -94,12 +94,11 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
     const dataWeekSub = this.taskSV.getDataWeek(m, y, id).subscribe(data => {
       this.resetData();
       for (let i = 0; i < data.length; i++) {
-        let weekNum = data[i].Week;
+        const weekNum = data[i].Week;
         this.transactions[weekNum - 1].EffortScore = data[i].EffortScore;
         this.transactions[weekNum - 1].MinusScore = data[i].MinusScore;
         this.transactions[weekNum - 1].FinalScore = data[i].FinalScore;
       }
-      this.notifier.notify('success', 'lấy dữ liệu thành công');
     });
     this.subcription.push(dataWeekSub);
   }
