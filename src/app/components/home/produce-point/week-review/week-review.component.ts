@@ -1,4 +1,4 @@
-import { Component, OnInit, OnDestroy } from '@angular/core';
+import { Component, OnInit, OnDestroy, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { MatDialogRef, MatDialog } from '@angular/material';
 import { AddTaskComponent } from '../add-task/add-task.component';
@@ -7,6 +7,8 @@ import { Year } from 'src/app/shared/array/year';
 import { Subscription } from 'rxjs';
 import { TaskService } from 'src/app/shared/services/task/task.service';
 import { NotifierService } from 'angular-notifier';
+import { CalendarComponent } from '../calendar/calendar.component';
+
 
 export interface Transaction {
   Week: number;
@@ -63,6 +65,8 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
       FinalScore: 0
     }
   ];
+  @ViewChild(CalendarComponent)
+  public calendar: CalendarComponent;
   //#region life cycle
   constructor(private activatedRoute: ActivatedRoute,
     public taskDialog: MatDialog,
@@ -183,6 +187,7 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
       // get lại dữ liệu
       if (result) {
         this.getDataWeek(this.monthSelected, this.yearSelected, this.emID);
+        this.calendar.getCheckedDate(this.monthSelected, this.yearSelected, this.emID);
         this.notifier.notify('success', 'Lưu thành công');
       }
     });

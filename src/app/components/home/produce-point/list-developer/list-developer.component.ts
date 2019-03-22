@@ -91,6 +91,10 @@ export class ListDeveloperComponent implements OnInit, OnDestroy {
   addEvent() {
     //do smt
   }
+  export(){
+    const config = `http://localhost:55465/Task/Export/3/2019/4E74DFFD-1188-46F2-BC42-E4746C5C39F1`;
+    window.open(config);
+  }
 }
 
 

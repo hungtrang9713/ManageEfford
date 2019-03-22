@@ -16,10 +16,10 @@ export class HomeComponent implements OnInit {
   fullName: string;
   isLead = false;
   ngOnInit() {
-    $('mat-toolbar-row').on('click', function () {
-      $('mat-toolbar-row').removeClass('selected');
-      $(this).addClass('selected');
-    });
+    // $('mat-toolbar-row').on('click', function () {
+    //   $('mat-toolbar-row').removeClass('selected');
+    //   $(this).addClass('selected');
+    // });
     this.fullName = localStorage.getItem('FullName');
     if (localStorage.getItem('IsLead') === 'true') {
       this.isLead = true;
