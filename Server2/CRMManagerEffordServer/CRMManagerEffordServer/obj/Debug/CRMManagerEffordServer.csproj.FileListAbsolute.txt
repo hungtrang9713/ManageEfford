@@ -476,3 +476,5 @@ D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\
 D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.dll
 D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.pdb
 >>>>>>> 25d8f853e8a412ae76adf7b333082bf60044a68f
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\EPPlus.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\EPPlus.xml

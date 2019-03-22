@@ -61,6 +61,7 @@ export class CalendarComponent implements OnInit, OnDestroy {
   getCheckedDate(m, y, id) {
     const getChecked = this.taskSV.getCheckedDate(m, y, id).subscribe(result => {
       if (result.length > 0) {
+        this.events =[];
         result.forEach(e => {
           this.events.push({ start: startOfDay(e.DateWorking), title: this.title });
         });
@@ -68,7 +69,21 @@ export class CalendarComponent implements OnInit, OnDestroy {
     });
     this.subscription.push(getChecked);
   }
-
+  //
+  getBookingJob(m, y, id) {
+    const getjob = this.taskSV.getBookingJobMonth(m, y, id).subscribe(result => {
+      if (result.length > 0) {
+        result.forEach(e => {
+          this.events.push({ start: startOfDay(e.DateWorking), title: `Xin nghỉ` });
+        });
+      }
+    });
+    this.subscription.push(getjob);
+  }
+  /**
+   * 
+   * @param chọn ngày
+   */
   clickDay(date: Date) {
     // todo
     this.date.emit(date);

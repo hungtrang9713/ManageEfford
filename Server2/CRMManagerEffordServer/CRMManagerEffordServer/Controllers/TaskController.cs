@@ -52,6 +52,13 @@ namespace CRMManagerEffordServer.Controllers
 
             return Ok(listResult);
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="month"></param>
+        /// <param name="year"></param>
+        /// <param name="userID"></param>
+        /// <returns></returns>
 
         [HttpGet]
         [Route("export/{month}/{year}/{userID}")]

@@ -50,7 +50,7 @@ export class DayComponent implements OnInit {
 
   workStatus: WorkingState = WorkingState.NoRegister;
 
-  listWorkStatus: Array<WorkingState> = [WorkingState.AllDay, WorkingState.Morning, WorkingState.Afternoon, WorkingState.NotWorking];
+  listWorkStatus: Array<WorkingState> = [WorkingState.AllDay, WorkingState.Morning, WorkingState.Afternoon, WorkingState.NotWorking,WorkingState.NoRegister];
 
   get isCurrentDay() {
     let currentDay = moment().format("DD");
@@ -112,16 +112,16 @@ export class DayComponent implements OnInit {
 
   convertWorkStatusToString(workStatus: WorkingState) {
     if (workStatus === WorkingState.AllDay) {
-      return "Cả ngày"
+      return "Nghỉ cả ngày"
     }
     if (workStatus === WorkingState.Morning) {
-      return "Sáng"
+      return "Nghỉ Sáng"
     }
     if (workStatus === WorkingState.Afternoon) {
-      return "Chiều"
+      return "Nghỉ Chiều"
     }
     if (workStatus === WorkingState.NotWorking) {
-      return "Nghỉ"
+      return "Chưa chắc chắn"
     }
     if (workStatus === WorkingState.NoRegister) {
       return "Chưa đăng kí"
@@ -139,13 +139,13 @@ export class DayComponent implements OnInit {
       Date: this.date,
       WorkingState: this.workStatus
     }
-    this.http.post("http://localhost:55465/JobBooking", jobBooking).subscribe(res => {
+    this.http.post(`http://localhost:55465/JobBooking/${localStorage.getItem('UserID')}`, jobBooking).subscribe(res => {
 
     })
   }
 
   getData() {
-    this.http.get(`http://localhost:55465/JobBooking/workingState/${this.date}`).subscribe(res => {
+    this.http.get(`http://localhost:55465/JobBooking/workingState/${this.date}/${localStorage.getItem('UserID')}`).subscribe(res => {
       this.workStatus = parseInt(res.toString());
     })
   }
