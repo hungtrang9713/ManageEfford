@@ -17,7 +17,8 @@ namespace CRMManagerEffordServer.App_Start
     {
         public override void OnAuthorization(HttpActionContext actionContext)
         {
-            if (actionContext.Request.RequestUri.LocalPath.ToLower() == "/user/login")
+            string uri = actionContext.Request.RequestUri.LocalPath.ToLower();
+            if (uri.StartsWith("/user/login") || uri.StartsWith("/task/export"))
             {
                 return;
             }
