@@ -1,10 +1,10 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Day } from 'src/app/shared/enums/day';
-import { WorkStatus } from 'src/app/shared/enums/work-status';
+import { WorkingState } from 'src/app/shared/enums/work-status';
 
 class DayData {
   Day: Day;
-  WorkStatus: WorkStatus;
+  WorkStatus: WorkingState;
 }
 
 @Component({

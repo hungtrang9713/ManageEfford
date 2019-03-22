@@ -1,12 +1,12 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Day } from 'src/app/shared/enums/day';
-import { WorkStatus } from 'src/app/shared/enums/work-status';
+import { WorkingState } from 'src/app/shared/enums/work-status';
 import * as moment from 'moment'
 import { HttpClient } from '@angular/common/http';
 
 class JobBooking {
-  UserID: string;
-  Date: Date;
+  UserID?: string;
+  Date: string;
   WorkingState: number
 }
 
@@ -22,7 +22,10 @@ export class DayComponent implements OnInit {
   ) { }
 
   ngOnInit() {
+    this.getData();
   }
+
+  isLoadFirstTime: true;
 
   private _week: number;
 
@@ -33,19 +36,21 @@ export class DayComponent implements OnInit {
   @Input()
   set week(week: number) {
     this._week = week;
-    this.getData();
+    if (this.day) {
+      this.getData();
+    }
   }
 
   @Input()
   day: Day;
 
-  get date(): Date {
-    return moment().weekday(this.day + this.week*7).toDate();
+  get date(): string {
+    return moment().weekday(this.day + this.week * 7).format('YYYY-MM-DD');
   }
 
-  workStatus: WorkStatus = WorkStatus.NoRegister;
+  workStatus: WorkingState = WorkingState.NoRegister;
 
-  listWorkStatus: Array<WorkStatus> = [WorkStatus.AllDay, WorkStatus.Morning, WorkStatus.Afternoon, WorkStatus.NotWorking];
+  listWorkStatus: Array<WorkingState> = [WorkingState.AllDay, WorkingState.Morning, WorkingState.Afternoon, WorkingState.NotWorking];
 
   get isCurrentDay() {
     let currentDay = moment().format("DD");
@@ -88,37 +93,37 @@ export class DayComponent implements OnInit {
   }
 
   get workStatusText() {
-    if (this.workStatus === WorkStatus.AllDay) {
+    if (this.workStatus === WorkingState.AllDay) {
       return "Cả ngày"
     }
-    if (this.workStatus === WorkStatus.Morning) {
+    if (this.workStatus === WorkingState.Morning) {
       return "Sáng"
     }
-    if (this.workStatus === WorkStatus.Afternoon) {
+    if (this.workStatus === WorkingState.Afternoon) {
       return "Chiều"
     }
-    if (this.workStatus === WorkStatus.NotWorking) {
+    if (this.workStatus === WorkingState.NotWorking) {
       return "Nghỉ"
     }
-    if (this.workStatus === WorkStatus.NoRegister) {
+    if (this.workStatus === WorkingState.NoRegister) {
       return "Chưa đăng kí"
     }
   }
 
-  convertWorkStatusToString(workStatus: WorkStatus) {
-    if (workStatus === WorkStatus.AllDay) {
+  convertWorkStatusToString(workStatus: WorkingState) {
+    if (workStatus === WorkingState.AllDay) {
       return "Cả ngày"
     }
-    if (workStatus === WorkStatus.Morning) {
+    if (workStatus === WorkingState.Morning) {
       return "Sáng"
     }
-    if (workStatus === WorkStatus.Afternoon) {
+    if (workStatus === WorkingState.Afternoon) {
       return "Chiều"
     }
-    if (workStatus === WorkStatus.NotWorking) {
+    if (workStatus === WorkingState.NotWorking) {
       return "Nghỉ"
     }
-    if (workStatus === WorkStatus.NoRegister) {
+    if (workStatus === WorkingState.NoRegister) {
       return "Chưa đăng kí"
     }
     return "";
@@ -132,16 +137,20 @@ export class DayComponent implements OnInit {
   saveToDB() {
     let jobBooking: JobBooking = {
       Date: this.date,
-      UserID: "4d7cbe29-eca7-49d4-ab2f-b968fe8d4490",
       WorkingState: this.workStatus
     }
-    this.http.post("http://localhost:50999/JobBooking", jobBooking).subscribe(res => {
+    this.http.post("http://localhost:55465/JobBooking", jobBooking).subscribe(res => {
 
     })
   }
 
   getData() {
-    
+    this.http.get(`http://localhost:55465/JobBooking/workingState/${this.date}`).subscribe(res => {
+      this.workStatus = parseInt(res.toString());
+    })
   }
+
+
+
 
 }
