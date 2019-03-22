@@ -24,7 +24,7 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
   private readonly notifier: NotifierService;
   // các trường được hiển thị
   displayedColumns = ['Week', 'EffortScore', 'MinusScore', 'FinalScore'];
-  emID: number;
+  emID: any;
   // list tháng năm
   months = Month;
   years = Year;

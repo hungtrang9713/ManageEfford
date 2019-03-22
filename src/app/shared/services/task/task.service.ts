@@ -38,8 +38,8 @@ export class TaskService {
   /**
    * hàm lấy dữ liệu tasks theo ngày đối với 1 user
    */
-  getCheckedDate(month, year): Observable<any> {
-    return this.http.get<any>(`${this.API_URL}/dateworking/${month}/${year}`);
+  getCheckedDate(month, year, userID): Observable<any> {
+    return this.http.get<any>(`${this.API_URL}/dateworking/${month}/${year}/${userID}`);
   }
   /**
    * các hàm xử lý api
