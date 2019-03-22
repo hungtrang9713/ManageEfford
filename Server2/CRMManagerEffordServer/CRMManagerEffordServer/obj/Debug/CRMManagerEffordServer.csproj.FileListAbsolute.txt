@@ -1,0 +1,397 @@
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\CRMManagerEffordServer.dll.config
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\CRMManagerEffordServer.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\CRMManagerEffordServer.pdb
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csc.exe
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csc.exe.config
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csc.rsp
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csi.exe
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csi.exe.config
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csi.rsp
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.AppContext.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Console.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.Compression.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.Pipes.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Claims.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.ValueTuple.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.XPath.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\vbc.exe
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\vbc.exe.config
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\vbc.rsp
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\VBCSCompiler.exe
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\Newtonsoft.Json.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Net.Http.Formatting.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.WebHost.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\Newtonsoft.Json.xml
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Net.Http.Formatting.xml
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.xml
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.WebHost.xml
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.csprojAssemblyReference.cache
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.csproj.CoreCompileInputs.cache
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.csproj.CopyComplete
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.pdb
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Helpers.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Mvc.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Razor.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Deployment.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Razor.dll
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Helpers.xml
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Mvc.xml
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Razor.xml
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.xml
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Deployment.xml
+C:\Users\trung\source\repos\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\CRMManagerEffordServer.dll.config
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\CRMManagerEffordServer.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\CRMManagerEffordServer.pdb
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csc.exe
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csc.exe.config
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csc.rsp
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csi.exe
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csi.exe.config
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csi.rsp
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.AppContext.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Console.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.Compression.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.Pipes.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Claims.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.ValueTuple.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.XPath.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\vbc.exe
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\vbc.exe.config
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\vbc.rsp
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\VBCSCompiler.exe
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Net.Http.Formatting.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.WebHost.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Net.Http.Formatting.xml
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.xml
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.WebHost.xml
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.pdb
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Cors.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.Cors.dll
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.Cors.xml
+C:\Users\Admin\Desktop\vietcuong\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.csprojResolveAssemblyReference.cache
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\CRMManagerEffordServer.dll.config
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\CRMManagerEffordServer.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\CRMManagerEffordServer.pdb
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csc.exe
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csc.exe.config
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csc.rsp
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csi.exe
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csi.exe.config
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csi.rsp
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.Managed.Core.targets
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.AppContext.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Collections.Immutable.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Console.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.Compression.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.FileSystem.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.Pipes.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Reflection.Metadata.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.AccessControl.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Claims.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Principal.Windows.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.ValueTuple.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.XmlDocument.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.XPath.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\vbc.exe
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\vbc.exe.config
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\vbc.rsp
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\VBCSCompiler.exe
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\VBCSCompiler.exe.config
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\Microsoft.Web.Infrastructure.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\Newtonsoft.Json.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Net.Http.Formatting.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Cors.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Helpers.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.Cors.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.WebHost.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Mvc.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Razor.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Deployment.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Razor.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Net.Http.Formatting.xml
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Helpers.xml
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.xml
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.Cors.xml
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.WebHost.xml
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Mvc.xml
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Razor.xml
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.xml
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Deployment.xml
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Razor.xml
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\Newtonsoft.Json.xml
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.csprojAssemblyReference.cache
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.csproj.CoreCompileInputs.cache
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.csproj.CopyComplete
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.dll
+D:\MISA\MISA\ManageEfford\Server\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.pdb
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\CRMManagerEffordServer.dll.config
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\CRMManagerEffordServer.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\CRMManagerEffordServer.pdb
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csc.exe
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csc.exe.config
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csc.rsp
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csi.exe
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csi.exe.config
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csi.rsp
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.AppContext.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Console.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.Compression.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.Pipes.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Claims.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.ValueTuple.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.XPath.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\vbc.exe
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\vbc.exe.config
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\vbc.rsp
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\VBCSCompiler.exe
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\Newtonsoft.Json.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Net.Http.Formatting.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Cors.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Helpers.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.Cors.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.WebHost.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Mvc.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Razor.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Deployment.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Razor.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Net.Http.Formatting.xml
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Helpers.xml
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.xml
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.Cors.xml
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.WebHost.xml
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Mvc.xml
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Razor.xml
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.xml
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Deployment.xml
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Razor.xml
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\Newtonsoft.Json.xml
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.csprojAssemblyReference.cache
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.csproj.CoreCompileInputs.cache
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.csproj.CopyComplete
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.dll
+C:\Users\trung\OneDrive\Máy tính\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.pdb
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\CRMManagerEffordServer.dll.config
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\CRMManagerEffordServer.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\CRMManagerEffordServer.pdb
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csc.exe
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csc.exe.config
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csc.rsp
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csi.exe
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csi.exe.config
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\csi.rsp
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.CSharp.Core.targets
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.Managed.Core.targets
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\Microsoft.VisualBasic.Core.targets
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.AppContext.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Collections.Immutable.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Console.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Diagnostics.StackTrace.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.Compression.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.FileSystem.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.FileSystem.Primitives.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.Pipes.AccessControl.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.IO.Pipes.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Reflection.Metadata.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.AccessControl.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Claims.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.Encoding.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.Primitives.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Security.Principal.Windows.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Text.Encoding.CodePages.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.ValueTuple.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.ReaderWriter.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.XmlDocument.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.XPath.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\System.Xml.XPath.XDocument.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\vbc.exe
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\vbc.exe.config
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\vbc.rsp
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\VBCSCompiler.exe
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\roslyn\VBCSCompiler.exe.config
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\EPPlus.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\Microsoft.Web.Infrastructure.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\Newtonsoft.Json.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Net.Http.Formatting.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Cors.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Helpers.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.Cors.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.WebHost.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Mvc.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Razor.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Deployment.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Razor.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\EPPlus.xml
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Net.Http.Formatting.xml
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Helpers.xml
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.xml
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.Cors.xml
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Http.WebHost.xml
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Mvc.xml
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.Razor.xml
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.xml
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Deployment.xml
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\System.Web.WebPages.Razor.xml
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\Newtonsoft.Json.xml
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.csprojAssemblyReference.cache
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.csproj.CoreCompileInputs.cache
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.csproj.CopyComplete
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.dll
+D:\ManageEfford\Server2\CRMManagerEffordServer\CRMManagerEffordServer\obj\Debug\CRMManagerEffordServer.pdb
