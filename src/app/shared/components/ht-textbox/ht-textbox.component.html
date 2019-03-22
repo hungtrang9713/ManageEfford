@@ -1,4 +1,4 @@
 <div class="textbox ht-flex" [ngClass]="{'ht-flex-column': isVertical,'ht-align-items-center': !isVertical}" [ngStyle]="{'width': width}">
     <div class="label" *ngIf="label" [ngClass]="{'label-vertical': isVertical}" [ngStyle]="{'width': labelWidth}">{{label}}</div>
-    <input class="ht-flex-grow" [ngStyle]="{'height': height}" [(ngModel)]="value"/>
+    <input [type]="typeInput" class="ht-flex-grow" [ngStyle]="{'height': height}" [(ngModel)]="value"/>
 </div>

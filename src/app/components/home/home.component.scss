@@ -21,6 +21,9 @@
             height: 20px;
             margin-right: 8px;
         }
+        .more-option:hover{
+            cursor: pointer;
+        }
     }
     mat-toolbar {
         background: #0277BD !important;

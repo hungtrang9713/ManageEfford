@@ -8,9 +8,11 @@ using System.Net.Http;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace CRMManagerEffordServer.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("User")]
     [AllowAnonymous]
     public class UserController : BaseController<User>

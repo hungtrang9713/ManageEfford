@@ -1,0 +1,131 @@
+{
+	"variables": [],
+	"info": {
+		"name": "CRM Manager",
+		"_postman_id": "e401220d-8db5-7818-d71c-b7a25ec8515e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Thêm/Sửa/Xóa task",
+			"request": {
+				"url": "http://localhost:55465/task/list",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic NWYxMzRlMzItYTc2Yy00NDk3LTgzZjktZmEyNDg0MzU4Nzhk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\n\t{\n\t\"PBI\":\"1234\",\n\t\"TaskName\":\"Danh sách liên hệ\",\n\t\"EffortScore\":\"7\",\n\t\"MinusScore\": \"1\",\n\t\"FinalScore\": \"6\",\n\t\"UserID\": \"98b19d3c-fc38-4a94-bc04-b2cd2762ec83\",\n\t\"Week\": 2,\n\t\"State\": 1\n\t},\n\t{\n\t\"PBI\":\"1234\",\n\t\"TaskName\":\"Danh sách liên hệ\",\n\t\"EffortScore\":\"10\",\n\t\"MinusScore\": \"0.5\",\n\t\"FinalScore\": \"9.5\",\n\t\"UserID\": \"98b19d3c-fc38-4a94-bc04-b2cd2762ec83\",\n\t\"Week\": 2,\n\t\"State\": 1\n\t}\n]"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Thêm mới user",
+			"request": {
+				"url": "http://localhost:55465/user/",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic MmFhMGVhYWMtYWY3Yi00Nzc0LTgxOGEtYmQxZjI2MjM4ZTBm",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"UserName\": \"nvcuong\",\n\t\"FullName\":\"Nguyễn Việt Cường\",\n\t\"State\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Tổng hợp theo tháng",
+			"request": {
+				"url": "http://localhost:55465/task/3/2019",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic NWYxMzRlMzItYTc2Yy00NDk3LTgzZjktZmEyNDg0MzU4Nzhk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"FromDate\": \"2019-03-14T09:41:44.600Z\",\n\t\"ToDate\": \"2019-03-16T09:41:44.600Z\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Tổng hợp theo tuần",
+			"request": {
+				"url": "http://localhost:55465/task/3/2019/98b19d3c-fc38-4a94-bc04-b2cd2762ec83",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Basic NWYxMzRlMzItYTc2Yy00NDk3LTgzZjktZmEyNDg0MzU4Nzhk",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"FromDate\": \"2019-03-14T09:41:44.600Z\",\n\t\"ToDate\": \"2019-03-16T09:41:44.600Z\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"url": "http://localhost:55465/user/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\" :\"ptdat\",\n\t\"password\":\"ptdat\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
