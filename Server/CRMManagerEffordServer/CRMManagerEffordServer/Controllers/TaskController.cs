@@ -48,13 +48,13 @@ namespace CRMManagerEffordServer.Controllers
         }
 
         [HttpGet]
-        [Route("dateworking/{month}/{year}")]
-        public IHttpActionResult GetDateWorkingMonth(int month, int year)
+        [Route("dateworking/{month}/{year}/{userID}")]
+        public IHttpActionResult GetDateWorkingMonth(int month, int year, Guid userID)
         {
             List<Task> listResult = null;
             try
             {
-                listResult = this.DL.GetListData(new { Month = month, Year = year }, "dbo.Proc_GetDateWorkingMonth");
+                listResult = this.DL.GetListData(new { Month = month, Year = year, UserID = userID }, "dbo.Proc_GetDateWorkingMonth");
             }
             catch (Exception)
             {

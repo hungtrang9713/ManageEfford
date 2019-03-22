@@ -16,7 +16,7 @@ import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 })
 
 export class HtTextboxComponent extends BaseControl implements OnInit, ControlValueAccessor {
-
+  @Input() typeInput: string;
   //#region LifeCycle
   constructor() {
     super();

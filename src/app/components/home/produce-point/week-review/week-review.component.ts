@@ -24,7 +24,8 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
   private readonly notifier: NotifierService;
   // các trường được hiển thị
   displayedColumns = ['Week', 'EffortScore', 'MinusScore', 'FinalScore'];
-  emID: number;
+  emID: any;
+  emName: string;
   // list tháng năm
   months = Month;
   years = Year;
@@ -92,6 +93,7 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
    */
   getDataWeek(m, y, id) {
     const dataWeekSub = this.taskSV.getDataWeek(m, y, id).subscribe(data => {
+      this.emName = data[0].FullName;
       this.resetData();
       for (let i = 0; i < data.length; i++) {
         const weekNum = data[i].Week;

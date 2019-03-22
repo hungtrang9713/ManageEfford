@@ -39,6 +39,7 @@ export class CalendarComponent implements OnInit, OnDestroy {
   monthSelected: number;
   yearSelected: number;
   @Input() viewDate: Date;
+  @Input() userID: string;
   @Output() date: EventEmitter<any> = new EventEmitter<any>();
   subscription: Array<Subscription> = [];
 
@@ -50,15 +51,15 @@ export class CalendarComponent implements OnInit, OnDestroy {
   ngOnInit() {
     this.monthSelected = this.viewDate.getMonth() + 1;
     this.yearSelected = this.viewDate.getFullYear();
-    this.getCheckedDate(this.monthSelected, this.yearSelected);
+    this.getCheckedDate(this.monthSelected, this.yearSelected, this.userID);
   }
   ngOnDestroy() {
     this.subscription.forEach(e => {
       e.unsubscribe();
     });
   }
-  getCheckedDate(m, y) {
-    const getChecked = this.taskSV.getCheckedDate(m, y).subscribe(result => {
+  getCheckedDate(m, y, id) {
+    const getChecked = this.taskSV.getCheckedDate(m, y, id).subscribe(result => {
       if (result.length > 0) {
         result.forEach(e => {
           this.events.push({ start: startOfDay(e.DateWorking), title: this.title });
