@@ -28,17 +28,17 @@
         <td mat-footer-cell *matFooterCellDef> Tổng điểm </td>
       </ng-container>
 
-      <!-- EffortPoint Column -->
-      <ng-container matColumnDef="EffortPoint">
+      <!-- EffortScore Column -->
+      <ng-container matColumnDef="EffortScore">
         <th mat-header-cell *matHeaderCellDef> Điểm năng suất </th>
-        <td mat-cell *matCellDef="let transaction">{{transaction.EffortPoint}}</td>
+        <td mat-cell *matCellDef="let transaction">{{transaction.EffortScore}}</td>
         <td mat-footer-cell *matFooterCellDef></td>
       </ng-container>
 
-      <!-- MinusPoint Column -->
-      <ng-container matColumnDef="MinusPoint">
+      <!-- MinusScore Column -->
+      <ng-container matColumnDef="MinusScore">
         <th mat-header-cell *matHeaderCellDef> Điểm trừ </th>
-        <td mat-cell *matCellDef="let transaction">{{transaction.MinusPoint}}</td>
+        <td mat-cell *matCellDef="let transaction">{{transaction.MinusScore}}</td>
         <td mat-footer-cell *matFooterCellDef></td>
       </ng-container>
 
@@ -59,3 +59,4 @@
   <hr>
 
 </div>
+<notifier-container></notifier-container>

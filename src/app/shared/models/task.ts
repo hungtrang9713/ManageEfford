@@ -1,4 +1,4 @@
-import { ActionState } from "../enums/action-state";
+import { ActionState } from '../enums/action-state';
 
 export class Task {
     TaskID?: string;
@@ -12,9 +12,9 @@ export class Task {
     ModifiedDate?: Date;
     UserID: string;
     Week: number;
-    DateWorking: Date;
-    ActionState: number;
-
+    DateWorking: any;
+    State: number;
+    Deleted?: Boolean;
     constructor(UserID, Week, DateData) {
         this.TaskName = ``;
         this.EffortScore = 0;
@@ -25,6 +25,7 @@ export class Task {
         this.DateWorking = DateData;
         this.Note = ``;
         this.PBI = ``;
-        this.ActionState = ActionState.Add;
+        this.State = ActionState.Add;
+        this.Deleted = false;
     }
 }

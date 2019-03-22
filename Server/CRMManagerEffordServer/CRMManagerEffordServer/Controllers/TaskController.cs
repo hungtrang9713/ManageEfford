@@ -5,9 +5,11 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Http.Cors;
 
 namespace CRMManagerEffordServer.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     [RoutePrefix("Task")]
     public class TaskController : BaseController<Task>
     {
@@ -36,6 +38,40 @@ namespace CRMManagerEffordServer.Controllers
             try
             {
                 listResult = this.DL.GetListData(new { Month = month, Year = year, UserID = userID }, "dbo.Proc_SummaryTask_Week");
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
+
+            return Ok(listResult);
+        }
+
+        [HttpGet]
+        [Route("dateworking/{month}/{year}")]
+        public IHttpActionResult GetDateWorkingMonth(int month, int year)
+        {
+            List<Task> listResult = null;
+            try
+            {
+                listResult = this.DL.GetListData(new { Month = month, Year = year }, "dbo.Proc_GetDateWorkingMonth");
+            }
+            catch (Exception)
+            {
+                return InternalServerError();
+            }
+
+            return Ok(listResult);
+        }
+
+        [HttpGet]
+        [Route("day/{date}/{userID}")]
+        public IHttpActionResult GetTaskDay(DateTime date, Guid userID)
+        {
+            List<Task> listResult = null;
+            try
+            {
+                listResult = this.DL.GetListData(new { DateWorking = date, UserID = userID }, "dbo.Proc_GetTask_Day");
             }
             catch (Exception)
             {

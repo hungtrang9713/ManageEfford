@@ -1,4 +1,4 @@
-﻿using CRMManagerEffordServer.Util;
+using CRMManagerEffordServer.Util;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -87,11 +87,11 @@ namespace CRMManagerEffordServer.DL
 
                 using (var reader = cmd.ExecuteReader())
                 {
-                    var oObject = Activator.CreateInstance<T>();
                     while (reader.Read())
                     {
                         if (reader.HasRows)
                         {
+                            var oObject = Activator.CreateInstance<T>();
                             Utils.AutoMapingObject<T>(reader, ref oObject);
                             listResult.Add(oObject);
                         }
