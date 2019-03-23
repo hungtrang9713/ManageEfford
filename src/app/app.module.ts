@@ -11,6 +11,7 @@ import { FormsModule } from '@angular/forms';
 import { UserService } from './shared/services/user.service';
 import { AuthGuard } from './auth/auth.guard';
 import { TokenInterceptorService } from './shared/services/token-interceptor.service';
+import { MatCheckboxModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { TokenInterceptorService } from './shared/services/token-interceptor.ser
     BrowserAnimationsModule,
     HttpClientModule,
     SharedComponentModule,
-    FormsModule
+    FormsModule,
+    MatCheckboxModule
   ],
   providers: [UserService, AuthGuard,
     {
