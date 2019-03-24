@@ -4,3 +4,54 @@
     background-position: center center;
     background-repeat: no-repeat;
 }
+.icon-user {
+    background-image: url("/assets/images/user.png");
+    width: 24px;
+    height: 24px;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.icon-back {
+    background-image: url("/assets/images/back.png");
+    width: 32px;
+    height: 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.icon-next {
+    background-image: url("/assets/images/next.png");
+    width: 32px;
+    height: 32px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.icon-setting {
+    background-image: url("/assets/images/settings.png");
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &:hover{
+        cursor: pointer;
+    }
+}
+.icon-edit {
+    background-image: url("/assets/images/edit.png");
+    width: 32px;
+    height: 32px;
+    margin: -196px;
+    padding: 200px;
+    padding-top: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    &:hover{
+        cursor: pointer;
+    }
+}

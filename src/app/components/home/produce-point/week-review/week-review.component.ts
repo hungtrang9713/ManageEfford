@@ -157,7 +157,7 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
    */
   getDate(): Date {
     const day = new Date().getDay();
-    const date = new Date(this.yearSelected, this.monthSelected - 1, day);
+    const date = new Date(this.yearSelected, this.monthSelected, day);
     return date;
   }
   /**

@@ -3,9 +3,9 @@
     <ht-textbox label="Tên đăng nhập" [isVertical]='true' [(ngModel)]="currentData.username"> </ht-textbox>
     <ht-textbox label="Mật khẩu" [typeInput]="'password'" [isVertical]='true' [(ngModel)]="currentData.password" (keydown.enter)="login()"></ht-textbox>
     <div class="footer ht-flex ht-justify-content-between">
-        <div class="left"></div>
+        <div class="left"><mat-checkbox color="warn">Nhớ mật khẩu</mat-checkbox></div>
         <div class="right">
-            <ht-button text="Đăng nhập" type="primary" icon="face" (buttonAction)="login()"></ht-button>
+            <ht-button text="Đăng nhập" type="primary" class="icon-user" (buttonAction)="login()"></ht-button>
         </div>
     </div>
 </div>
