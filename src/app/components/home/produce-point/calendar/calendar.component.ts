@@ -38,7 +38,8 @@ export class CalendarComponent implements OnInit, OnDestroy {
   title = 'Đã chấm công';
   monthSelected: number;
   yearSelected: number;
-  @Input() viewDate: Date;
+  viewDate: Date;
+  @Input() viewDateInput: Date;
   @Input() userID: string;
   @Output() date: EventEmitter<any> = new EventEmitter<any>();
   subscription: Array<Subscription> = [];
@@ -49,8 +50,9 @@ export class CalendarComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.monthSelected = this.viewDate.getMonth() + 1;
-    this.yearSelected = this.viewDate.getFullYear();
+    this.monthSelected = this.viewDateInput.getMonth();
+    this.yearSelected = this.viewDateInput.getFullYear();
+    this.setViewDate(this.yearSelected, this.monthSelected - 1);
     this.getCheckedDate(this.monthSelected, this.yearSelected, this.userID);
   }
   ngOnDestroy() {
@@ -58,10 +60,22 @@ export class CalendarComponent implements OnInit, OnDestroy {
       e.unsubscribe();
     });
   }
+  /***
+   * lấy ra bảng lịch
+   */
+  setViewDate(y, m) {
+    this.viewDate = new Date(y, m, 10);
+  }
+  /**
+   * lấy những ngày có event
+   * @param m 
+   * @param y 
+   * @param id 
+   */
   getCheckedDate(m, y, id) {
     const getChecked = this.taskSV.getCheckedDate(m, y, id).subscribe(result => {
       if (result.length > 0) {
-        this.events =[];
+        this.events = [];
         result.forEach(e => {
           this.events.push({ start: startOfDay(e.DateWorking), title: this.title });
         });

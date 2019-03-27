@@ -13,6 +13,8 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { NotifierModule, NotifierOptions } from 'angular-notifier';
+import { SharedComponentModule } from 'src/app/shared/components/shared-component.module';
+import { AddUserPopupComponent } from 'src/app/shared/components/add-user-popup/add-user-popup.component';
 /*
  * Custom angular notifier options
  */
@@ -24,7 +26,7 @@ const customNotifierOptions: NotifierOptions = {
     },
     vertical: {
       position: 'bottom',
-      distance: 12,
+      distance: 528,
       gap: 10
     }
   },
@@ -67,6 +69,7 @@ const customNotifierOptions: NotifierOptions = {
   imports: [
     CommonModule,
     ProducePointRoutingModule,
+    SharedComponentModule,
     MatTableModule,
     MatPaginatorModule,
     MatInputModule,
@@ -82,7 +85,8 @@ const customNotifierOptions: NotifierOptions = {
     })
   ],
   entryComponents: [
-    AddTaskComponent
+    AddTaskComponent,
+    AddUserPopupComponent
   ]
 })
 export class ProducePointModule { }

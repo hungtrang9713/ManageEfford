@@ -97,7 +97,7 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
    */
   getDataWeek(m, y, id) {
     const dataWeekSub = this.taskSV.getDataWeek(m, y, id).subscribe(data => {
-      this.emName = data[0].FullName;
+      if (data.length !== 0) { this.emName = data[0].FullName; }
       this.resetData();
       for (let i = 0; i < data.length; i++) {
         const weekNum = data[i].Week;
@@ -168,6 +168,8 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
     this.monthSelected = month;
     // gọi service
     this.getDataWeek(month, year, this.emID);
+    this.calendar.setViewDate(year, month - 1);
+    this.calendar.getCheckedDate(month, year, this.emID);
   }
   /**
    * chọn ngày
