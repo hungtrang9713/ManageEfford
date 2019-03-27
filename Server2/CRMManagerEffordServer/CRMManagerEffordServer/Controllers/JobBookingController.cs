@@ -40,7 +40,7 @@ namespace CRMManagerEffordServer.Controllers
             return command.ExecuteReader();
         }
         /// <summary>
-        /// 
+        /// lấy danh sách các ngày nghỉ trong tháng
         /// </summary>
         /// <param name="month"></param>
         /// <param name="year"></param>

@@ -82,7 +82,7 @@ export class AddTaskComponent implements OnInit, OnDestroy {
   deleteTask(task: Task) {
     for (let i = 0; i < this.tasks.length; i++) {
       if (task.TaskID === this.tasks[i].TaskID) {
-        if (this.tasks.length <= 1 && task.TaskName !== '') {
+        if (this.tasks.length <= 1 || task.TaskName !== '') {
           task.State = ActionState.Delete;
           task.Deleted = true;
         } else {
