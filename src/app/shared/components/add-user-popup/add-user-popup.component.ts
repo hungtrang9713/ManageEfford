@@ -50,7 +50,10 @@ export class AddUserPopupComponent implements OnInit {
 
   }
   onSubmit() {
+<<<<<<< HEAD
+=======
     console.log(this.rfContact.value);
+>>>>>>> d4075886584846ec6024942aae9a9d386f379e72
     this.dialogRef.close(this.rfContact.value);
   }
   // đóng dialog
