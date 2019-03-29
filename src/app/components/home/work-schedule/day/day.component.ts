@@ -50,7 +50,7 @@ export class DayComponent implements OnInit {
 
   workStatus: WorkingState = WorkingState.NoRegister;
 
-  listWorkStatus: Array<WorkingState> = [WorkingState.AllDay, WorkingState.Morning, WorkingState.Afternoon, WorkingState.NotWorking,WorkingState.NoRegister];
+  listWorkStatus: Array<WorkingState> = [WorkingState.AllDay, WorkingState.Morning, WorkingState.Afternoon, WorkingState.NotWorking, WorkingState.NoRegister];
 
   get isCurrentDay() {
     let currentDay = moment().format("DD");
@@ -135,10 +135,10 @@ export class DayComponent implements OnInit {
   }
 
   saveToDB() {
-    let jobBooking: JobBooking = {
+    const jobBooking: JobBooking = {
       Date: this.date,
       WorkingState: this.workStatus
-    }
+    };
     this.http.post(`http://localhost:55465/JobBooking/${localStorage.getItem('UserID')}`, jobBooking).subscribe(res => {
 
     })

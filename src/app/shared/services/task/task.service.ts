@@ -41,7 +41,4 @@ export class TaskService {
   getCheckedDate(month, year, userID): Observable<any> {
     return this.http.get<any>(`${this.API_URL}/dateworking/${month}/${year}/${userID}`);
   }
-  getBookingJobMonth(month, year, userID): Observable<any> {
-    return this.http.get<any>(`${this.API_URL}/job-booking/${month}/${year}/${userID}`);
-  }
 }

@@ -7,10 +7,10 @@
     <mat-label>Mật khẩu</mat-label>
     <input placeholder="Mật khẩu" class="form-control" type="password" formControlName="Password" required />
     <mat-checkbox style="margin: 8px" color="warn" formControlName="IsLead">Là Dev Lead</mat-checkbox>
-    <mat-label for="lead">Trưởng nhóm</mat-label>
-    <select id="lead" class="form-control">
-      <option *ngFor="let food of foods" [value]="food.value">
-        {{food.viewValue}}
+    <mat-label>Trưởng nhóm</mat-label>
+    <select class="form-control" formControlName="LeadID">
+      <option *ngFor="let lead of leads" [value]="lead.UserID">
+        {{lead.FullName}}
       </option>
     </select>
   </form>

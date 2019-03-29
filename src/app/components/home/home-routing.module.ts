@@ -23,7 +23,11 @@ const routes: Routes = [
       {
         path: 'produce-point',
         loadChildren: './produce-point/produce-point.module#ProducePointModule'
-      }
+      },
+      {
+        path: 'manage-group',
+        loadChildren: './manage-group/manage-group.module#ManageGroupModule'
+      },
     ]
   }
 ];

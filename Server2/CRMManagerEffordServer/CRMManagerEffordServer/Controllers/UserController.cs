@@ -7,6 +7,7 @@ using System.Net;
 using System.Net.Http;
 using System.Security.Cryptography;
 using System.Text;
+using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
@@ -26,7 +27,7 @@ namespace CRMManagerEffordServer.Controllers
         [HttpPost]
         [AllowAnonymous]
         [Route("login")]
-        public IHttpActionResult Login(User user) 
+        public IHttpActionResult Login(User user)
         {
             var md5 = new MD5CryptoServiceProvider();
             var userDB = this.DL.GetObject(new
@@ -46,5 +47,27 @@ namespace CRMManagerEffordServer.Controllers
             }
             return Unauthorized();
         }
+
+        [HttpGet]
+        [Route("listLead")]
+        public async Task<HttpResponseMessage> GetListLead()
+        {
+            //tạo response
+            HttpResponseMessage res = new HttpResponseMessage();
+            List<User> listResult = null;
+            try
+            {
+                listResult = this.DL.GetListData(new { }, "[dbo].[Proc_GetListLead]");
+
+                res = Request.CreateResponse(HttpStatusCode.OK, listResult);
+            }
+            catch (Exception ex)
+            {
+                res = Request.CreateResponse(ex.Message);
+            }
+
+            return await System.Threading.Tasks.Task.FromResult(res);
+        }
     }
+
 }

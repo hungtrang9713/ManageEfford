@@ -1,28 +1,36 @@
-import { Component, OnInit, Inject } from '@angular/core';
+import { Component, OnInit, Inject, OnDestroy } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material';
-import { FormControl, Validators, FormBuilder, FormGroup } from '@angular/forms';
-import { Observable } from 'rxjs';
+import { Validators, FormBuilder, FormGroup } from '@angular/forms';
+import { Observable, Subscription } from 'rxjs';
 import { startWith, map } from 'rxjs/operators';
+import { UserService } from '../../services/user.service';
+import { User } from '../../models/user';
+import { ActionState } from '../../enums/action-state';
+
+export interface Lead {
+  UserID: string;
+  FullName: string;
+}
 
 @Component({
   selector: 'app-add-user-popup',
   templateUrl: './add-user-popup.component.html',
   styleUrls: ['./add-user-popup.component.scss']
 })
-export class AddUserPopupComponent implements OnInit {
+
+export class AddUserPopupComponent implements OnInit, OnDestroy {
   //#region property
   // reference form contact
   rfContact: FormGroup;
   // mảng tên lead
-  foods: any[] = [
-    { value: 'cf577878-5b80-41c4-9901-b71b8b53c649', viewValue: 'Nguyễn Đình Nghĩa' },
-    { value: 'pizza-1', viewValue: 'Pizza' },
-    { value: 'tacos-2', viewValue: 'Tacos' }
-  ];
+  leads: Lead[] = [];
+  // subcription
+  subs: Array<Subscription> = [];
   //#region life cycle
   constructor(public dialogRef: MatDialogRef<AddUserPopupComponent>,
     @Inject(MAT_DIALOG_DATA) public data: any,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private userSV: UserService
   ) { }
   // khởi tạo các đối tượng form control
   ngOnInit() {
@@ -33,7 +41,13 @@ export class AddUserPopupComponent implements OnInit {
       IsLead: this.fb.control(0),
       LeadID: this.fb.control('cf577878-5b80-41c4-9901-b71b8b53c649', [Validators.required])
     });
-
+    // lấy data combo
+    this.getLeadInfo();
+  }
+  ngOnDestroy() {
+    this.subs.forEach(e => {
+      e.unsubscribe();
+    });
   }
   //#region function
   // hiện lỗi
@@ -42,19 +56,25 @@ export class AddUserPopupComponent implements OnInit {
       this.rfContact.controls.FullName.hasError('required') ? 'Tên nhân viên không được để trống' :
         this.rfContact.controls.Password.hasError('required') ? 'Mật khẩu không được để trống' : 'lỗi khác';
   }
-
+  // lấy ds lead
+  getLeadInfo() {
+    const leadInfoSub = this.userSV.getListLead().subscribe(data => {
+      this.leads = data;
+    });
+    this.subs.push(leadInfoSub);
+  }
   /**
  * hàm lưu công việc
  */
-  saveData() {
-
-  }
   onSubmit() {
-<<<<<<< HEAD
-=======
-    console.log(this.rfContact.value);
->>>>>>> d4075886584846ec6024942aae9a9d386f379e72
-    this.dialogRef.close(this.rfContact.value);
+    let user = new User(ActionState.Add);
+    user = this.rfContact.value;
+    user.state = ActionState.Add;
+    const addSub = this.userSV.addUser(user).subscribe(data => {
+      this.dialogRef.close(this.rfContact.value);
+    }, err => {
+      alert('có lỗi xảy ra!');
+    });
   }
   // đóng dialog
   cancelDialog() {
