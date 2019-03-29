@@ -11,7 +11,7 @@ namespace CRMManagerEffordServer.Models
         [Key]
         public Guid JobBookingID { get; set; }
         public Guid UserID { get; set; }
-        public string Date { get; set; }
+        public DateTime Date { get; set; }
         public int WorkingState { get; set; }
     }
 }

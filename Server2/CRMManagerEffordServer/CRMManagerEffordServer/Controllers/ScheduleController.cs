@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Net;
 using System.Net.Http;
+using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Cors;
 
@@ -24,20 +25,22 @@ namespace CRMManagerEffordServer.Controllers
         /// < returns ></ returns >
         [HttpGet]
         [Route("{month}/{year}/{userID}")]
-        public IHttpActionResult GetBookingJobMonth(int month, int year, Guid userID)
+        public async Task<HttpResponseMessage> GetBookingJobMonth(int month, int year, Guid userID)
         {
-            string userId = userID.ToString();
+            //tạo response
+            HttpResponseMessage res = new HttpResponseMessage();
             List<JobBooking> listResult = null;
             try
             {
-                listResult = this.DL.GetListData(new { Month = month, Year = year, UserID = userId}, "[dbo].[Proc_GetJobBookingMonth]");
+                listResult = this.DL.GetListData(new { Month = month, Year = year, UserID = userID}, "[dbo].[Proc_GetJobBookingMonth]");
+                res = Request.CreateResponse(HttpStatusCode.OK,listResult);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-                return InternalServerError();
+                res = Request.CreateResponse(ex.Message);
             }
 
-            return Ok(listResult);
+            return await System.Threading.Tasks.Task.FromResult(res);
         }
 
     }

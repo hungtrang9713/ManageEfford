@@ -82,6 +82,9 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
     this.yearSelected = parseInt(this.activatedRoute.snapshot.params.year);
     // get dữ liệu
     this.getDataWeek(this.monthSelected, this.yearSelected, this.emID);
+    // lấy dữ liệu ngày nghỉ
+    this.calendar.getBookingJob(this.monthSelected, this.yearSelected, this.emID);
+
   }
   ngOnDestroy() {
     this.subcription.forEach(sub => {
@@ -170,6 +173,7 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
     this.getDataWeek(month, year, this.emID);
     this.calendar.setViewDate(year, month - 1);
     this.calendar.getCheckedDate(month, year, this.emID);
+    this.calendar.getBookingJob(month, year, this.emID);
   }
   /**
    * chọn ngày

@@ -18,5 +18,9 @@ namespace CRMManagerEffordServer.Models
         public bool IsLead { get; set; }
 
         public string Password { get; set; }
+        /// <summary>
+        /// mã lead
+        /// </summary>
+        public Guid LeadID { get; set; }
     }
 }

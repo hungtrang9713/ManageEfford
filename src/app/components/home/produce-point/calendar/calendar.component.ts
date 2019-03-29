@@ -13,6 +13,8 @@ import {
 } from 'date-fns';
 import { TaskService } from 'src/app/shared/services/task/task.service';
 import { Subscription } from 'rxjs';
+import { JobBookingService } from 'src/app/shared/services/job-booking/job-booking.service';
+import { convertWorkStatusToString } from 'src/app/shared/fn/get-text-status';
 
 const colors: any = {
   red: {
@@ -45,7 +47,7 @@ export class CalendarComponent implements OnInit, OnDestroy {
   subscription: Array<Subscription> = [];
 
   events: CalendarEvent[] = [];
-  constructor(public dialog: MatDialog, public taskSV: TaskService) {
+  constructor(public dialog: MatDialog, public taskSV: TaskService, private scheduleSV: JobBookingService) {
 
   }
 
@@ -54,6 +56,7 @@ export class CalendarComponent implements OnInit, OnDestroy {
     this.yearSelected = this.viewDateInput.getFullYear();
     this.setViewDate(this.yearSelected, this.monthSelected - 1);
     this.getCheckedDate(this.monthSelected, this.yearSelected, this.userID);
+    this.getBookingJob(this.monthSelected, this.yearSelected, this.userID);
   }
   ngOnDestroy() {
     this.subscription.forEach(e => {
@@ -83,14 +86,22 @@ export class CalendarComponent implements OnInit, OnDestroy {
     });
     this.subscription.push(getChecked);
   }
-  //
+  // lấy dữ liệu nghỉ tháng
   getBookingJob(m, y, id) {
-    const getjob = this.taskSV.getBookingJobMonth(m, y, id).subscribe(result => {
+    const getjob = this.scheduleSV.getBookingJobMonth(m, y, id).subscribe(result => {
       if (result.length > 0) {
         result.forEach(e => {
-          this.events.push({ start: startOfDay(e.DateWorking), title: `Xin nghỉ` });
+          this.events = [...this.events,
+          {
+            title: convertWorkStatusToString(e.WorkingState),
+            start: startOfDay(e.Date),
+            end: endOfDay(e.Date),
+            color: colors.red,
+          }];
         });
       }
+    }, err => {
+      alert('có lỗi xảy ra');
     });
     this.subscription.push(getjob);
   }
