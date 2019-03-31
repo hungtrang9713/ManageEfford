@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit {
 
   constructor(private router: Router) { }
   employeeID = localStorage.getItem('UserID');
+  employeeName = localStorage.getItem('FullName');
   fullName: string;
   isLead = false;
   ngOnInit() {
@@ -32,6 +33,10 @@ export class HomeComponent implements OnInit {
     const today = new Date();
     // lấy userID qua service, ID hiện tại đang fake
     return `/home/produce-point/employee/${this.employeeID}/${today.getMonth() + 1}/${today.getFullYear()}`;
+  }
+
+  getRouteForSchedule(){
+    return `/home/work-schedule/schedule/${this.employeeID}/${this.employeeName}`;
   }
   logout() {
     localStorage.removeItem('Token');

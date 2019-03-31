@@ -12,7 +12,7 @@
         </mat-menu>
       </div>
       <mat-toolbar color="primary">
-        <mat-toolbar-row routerLink="/home/work-schedule">
+        <mat-toolbar-row [routerLink]="getRouteForSchedule()">
           <span>Đăng kí lịch làm việc</span>
         </mat-toolbar-row>
 
@@ -24,11 +24,11 @@
           <span>Quản lý thành viên</span>
         </mat-toolbar-row>
 
-        <mat-toolbar-row routerLink="/home/manage-group">
+        <mat-toolbar-row routerLink="/home/manage-group" *ngIf="isLead">
           <span>Quản lý các nhóm</span>
         </mat-toolbar-row>
 
-        <mat-toolbar-row routerLink="/home/manager-pbi">
+        <mat-toolbar-row routerLink="/home/manager-pbi" *ngIf="isLead">
           <span>Quản lý PBI</span>
         </mat-toolbar-row>
       </mat-toolbar>

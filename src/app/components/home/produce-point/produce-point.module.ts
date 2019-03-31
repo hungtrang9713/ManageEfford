@@ -71,7 +71,6 @@ const customNotifierOptions: NotifierOptions = {
     ProducePointRoutingModule,
     SharedComponentModule,
     MatTableModule,
-    MatPaginatorModule,
     MatInputModule,
     MatDialogModule,
     MatButtonModule,
