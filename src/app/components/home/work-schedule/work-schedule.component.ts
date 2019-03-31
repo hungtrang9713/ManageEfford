@@ -21,6 +21,7 @@ export class WorkScheduleComponent implements OnInit {
 
   ngOnInit() {
     this.fullName = this.activatedroute.snapshot.params.fullName;
+
     this.currentTime = moment();
   }
 
