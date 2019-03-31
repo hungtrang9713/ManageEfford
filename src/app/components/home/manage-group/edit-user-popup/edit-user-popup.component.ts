@@ -16,6 +16,7 @@ export interface Lead {
 })
 export class EditUserPopupComponent implements OnInit, OnDestroy {
   //#region prop
+  passwordValid = true;
   // mảng tên lead
   leads: Lead[] = [];
   // reference form contact
@@ -33,7 +34,7 @@ export class EditUserPopupComponent implements OnInit, OnDestroy {
     this.rfContact = this.fb.group({
       UserName: this.fb.control(this.data.UserName, [Validators.required]),
       FullName: this.fb.control(this.data.FullName, [Validators.required]),
-      Password: this.fb.control(this.data.PassWord, [Validators.required]),
+      Password: this.fb.control(this.data.PassWord),
       IsLead: this.fb.control(this.data.IsLead),
       LeadID: this.fb.control(this.data.LeadID, [Validators.required])
     });
@@ -49,7 +50,7 @@ export class EditUserPopupComponent implements OnInit, OnDestroy {
   getErrorMessage() {
     return this.rfContact.controls.UserName.hasError('required') ? 'Mã nhân viên không được để trống' :
       this.rfContact.controls.FullName.hasError('required') ? 'Tên nhân viên không được để trống' :
-        this.rfContact.controls.Password.hasError('required') ? 'Mật khẩu không được để trống' : 'lỗi khác';
+        this.rfContact.controls.LeadID.hasError('required') ? 'Trưởng nhóm không được để trống' : 'lỗi khác';
   }
   // lấy ds lead
   getLeadInfo() {
@@ -62,15 +63,20 @@ export class EditUserPopupComponent implements OnInit, OnDestroy {
   /**
 * hàm lưu công việc
 */
-  onSubmit() {
-    let user = new User(ActionState.Edit);
-    user = this.rfContact.value;
-    user.UserID = this.data.UserID;
-    const addSub = this.userSV.editUser(user).subscribe(data => {
-      this.dialogRef.close(true);
-    }, err => {
-      alert('có lỗi xảy ra!');
-    });
+  onSubmit(passwordValue = '') {
+    if (passwordValue === '') {
+      this.passwordValid = false;
+    } else {
+      let user = new User(ActionState.Edit);
+      user = this.rfContact.value;
+      user.UserID = this.data.UserID;
+      user.PassWord = passwordValue;
+      const addSub = this.userSV.editUser(user).subscribe(data => {
+        this.dialogRef.close(true);
+      }, err => {
+        alert('có lỗi xảy ra!');
+      });
+    }
   }
   // đóng dialog
   cancelDialog() {
