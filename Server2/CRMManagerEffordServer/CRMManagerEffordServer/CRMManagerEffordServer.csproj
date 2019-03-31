@@ -162,6 +162,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\BaseEntity.cs" />
+    <Compile Include="Models\EmployeeManagement.cs" />
     <Compile Include="Models\Enumaration.cs" />
     <Compile Include="Models\JobBooking.cs" />
     <Compile Include="Models\Task.cs" />

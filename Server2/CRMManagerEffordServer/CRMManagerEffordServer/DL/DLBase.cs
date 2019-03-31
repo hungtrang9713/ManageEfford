@@ -1,3 +1,4 @@
+using CRMManagerEffordServer.Models;
 using CRMManagerEffordServer.Util;
 using System;
 using System.Collections.Generic;
@@ -109,6 +110,90 @@ namespace CRMManagerEffordServer.DL
             return listResult;
         }
 
+        public List<EmployeeManagement> GetListEmployee(object procParam, string procName = "")
+        {
+            List<EmployeeManagement> listResult = new List<EmployeeManagement>();
+            List<User> listUsers = new List<User>();
+
+            // lấy mảng leads
+            try
+            {
+                procName = string.IsNullOrWhiteSpace(procName) ? "Proc_GetList" + typeof(T).Name : procName;
+                Conn.Open();
+                SqlCommand cmd = Conn.CreateCommand();
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.CommandText = procName;
+                Utils.MappingParameter(cmd, procParam);
+
+                // đọc dataset
+                SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+                DataSet dataset = new DataSet();
+                adapter.Fill(dataset);
+
+                if (dataset.Tables.Count > 0)
+                {
+                    DataTable tableLeads = dataset.Tables[0];
+                    DataTable tableUsers = dataset.Tables[1];
+                    // lấy bảng lead
+                    foreach (DataRow row in tableLeads.Rows)
+                    {
+                        var lead = Activator.CreateInstance<EmployeeManagement>();
+                        foreach (DataColumn column in tableLeads.Columns)
+                        {
+                            string columnName = column.ColumnName;
+                            //var abc = row[column];
+                            if (lead.GetType().GetProperty(columnName) != null && row[columnName] != DBNull.Value)
+                            {
+                                lead.GetType().GetProperty(columnName).SetValue(lead, row[columnName], null);
+                            }
+                        }
+                        listResult.Add(lead);
+                    }
+                    // lấy bảng user
+
+                    foreach (DataRow row in tableUsers.Rows)
+                    {
+                        var user = Activator.CreateInstance<User>();
+                        foreach (DataColumn column in tableUsers.Columns)
+                        {
+                            string columnName = column.ColumnName;
+                            //var abc = row[column];
+                            if (user.GetType().GetProperty(columnName) != null && row[columnName] != DBNull.Value)
+                            {
+                                user.GetType().GetProperty(columnName).SetValue(user, row[columnName], null);
+                            }
+                        }
+                        listUsers.Add(user);
+                    }
+                    // gắn mảng employeemanagement cho các lead
+                    foreach(EmployeeManagement lead in listResult)
+                    {
+                        List<User> employees = new List<User>();
+                        foreach(User user in listUsers)
+                        {
+                            if(user.UserID != user.LeadID && user.LeadID == lead.UserID)
+                            {
+                                employees.Add(user);
+                            }
+                        }
+                        lead.ListEmployee = employees;
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                throw;
+            }
+            finally
+            {
+                if (Conn != null && Conn.State != ConnectionState.Closed)
+                {
+                    Conn.Close();
+                }
+            }
+            return listResult;
+        }
         /// <summary>
         /// Lấy về một object
         /// </summary>
@@ -178,5 +263,7 @@ namespace CRMManagerEffordServer.DL
 
             return result;
         }
+
+
     }
 }

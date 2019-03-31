@@ -48,15 +48,15 @@ export class ListDeveloperComponent implements OnInit, OnDestroy {
   public dataSource = new MatTableDataSource<DataMonth>(this.ELEMENT_DATA);
 
   @ViewChild(MatPaginator) paginator: MatPaginator;
-  constructor(private navigator: Router,
-    private taskSV: TaskService,
-    public addUserDialog: MatDialog,
-    public notifier: NotifierService
-  ) {}
 
 //#endregion property
 
 //#region life cycle
+constructor(private navigator: Router,
+  private taskSV: TaskService,
+  public addUserDialog: MatDialog,
+  public notifier: NotifierService
+) {}
 ngOnInit() {
   this.dataSource.paginator = this.paginator;
   // gọi hàm getdataMoth

@@ -1,0 +1,22 @@
+<div class="container" style="min-width:400px">
+  <form class="d-flex flex-column form-group" novalidate (ngSubmit)="onSubmit()" [formGroup]="rfContact">
+    <mat-label>Mã nhân viên</mat-label>
+    <input placeholder="Mã nhân viên" class="form-control" formControlName="UserName" required />
+    <mat-label>Tên nhân viên</mat-label>
+    <input placeholder="Tên nhân viên" class="form-control" formControlName="FullName" required />
+    <mat-label>Mật khẩu</mat-label>
+    <input placeholder="Mật khẩu" class="form-control" type="password" [value]="data.Password" formControlName="Password" required />
+    <mat-checkbox style="margin: 8px" color="warn" formControlName="IsLead">Là Dev Lead</mat-checkbox>
+    <mat-label>Trưởng nhóm</mat-label>
+    <select class="form-control" formControlName="LeadID">
+      <option *ngFor="let lead of leads" [value]="lead.UserID">
+        {{lead.FullName}}
+      </option>
+    </select>
+  </form>
+  <mat-error *ngIf="rfContact.invalid">{{getErrorMessage()}}</mat-error>
+  <div class="d-flex justify-content-end">
+    <button type="button" class="btn btn-danger right-16" (click)="cancelDialog()">Hủy bỏ</button>
+    <button type="submit" class="btn btn-primary" [disabled]="!rfContact.valid" (click)="onSubmit()">Lưu</button>
+  </div>
+</div>

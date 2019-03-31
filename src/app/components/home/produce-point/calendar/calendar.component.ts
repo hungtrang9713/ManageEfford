@@ -52,7 +52,7 @@ export class CalendarComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit() {
-    this.monthSelected = this.viewDateInput.getMonth();
+    this.monthSelected = this.viewDateInput.getMonth() + 1;
     this.yearSelected = this.viewDateInput.getFullYear();
     this.setViewDate(this.yearSelected, this.monthSelected - 1);
     this.getCheckedDate(this.monthSelected, this.yearSelected, this.userID);

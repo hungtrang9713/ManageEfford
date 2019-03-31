@@ -6,7 +6,11 @@ export class User {
     PassWord: string;
     LeadID: string;
     state: number;
-    constructor(state){
+    constructor(state) {
         this.state = state;
     }
+}
+
+export class EmployeeManagement extends User {
+    ListEmployee: Array<User>;
 }

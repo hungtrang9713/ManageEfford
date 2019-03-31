@@ -1,22 +1,25 @@
-<div class="container-body container">
+<ng-container *ngFor="let employee of employees">
 
-<table class="table table-bordered table-striped table-hover text-nowrap">
-  <thead>
+<div class="container-body">
+<table class="table table-small table-bordered table-hover text-nowrap">
+  <thead class="thead-highlight">
     <tr>
-      <th scope="col" colspan="6">Dev Lead: Dương Trung Thảo</th>
+      <th scope="col" colspan="6">Dev Lead: {{employee.FullName}}</th>
 
     </tr>
   </thead>
   <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Nguyễn Việt Cường</td>
-      <td><button type="button" class="btn btn-primary">Xem điểm năng suất</button></td>
-      <td><button type="button" class="btn btn-primary">Xem lịch làm việc</button></td>
-      <td><button type="button" class="btn btn-warning">Sửa thông tin</button></td>
-      <td><button type="button" class="btn btn-danger">Xóa</button></td>
+    <tr *ngFor="let user of employee.ListEmployee; index as i">
+      <th class="max-width-150" scope="row">{{i+1}}</th>
+      <td class="max-width-150">{{user.FullName}}</td>
+      <td class="max-width-150"><button type="button" class="btn btn-primary" (click)="navigateEffort(user.UserID)">Xem điểm năng suất</button></td>
+      <td class="max-width-150"><button type="button" class="btn btn-primary" (click)="navigateSchedule(user.UserID,user.FullName)">Xem lịch làm việc</button></td>
+      <td class="max-width-150"><button type="button" class="btn btn-warning" (click)="editUser(user)">Sửa thông tin</button></td>
+      <td class="max-width-150"><button type="button" class="btn btn-danger" (click)="deleteUser(user)">Xóa</button></td>
     </tr>
   </tbody>
-</table>  
+</table>
 
 </div>
+</ng-container>
+<notifier-container></notifier-container>

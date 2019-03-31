@@ -3,11 +3,12 @@ import { Day } from 'src/app/shared/enums/day';
 import { WorkingState } from 'src/app/shared/enums/work-status';
 import * as moment from 'moment'
 import { HttpClient } from '@angular/common/http';
+import { ActivatedRoute } from '@angular/router';
 
 class JobBooking {
   UserID?: string;
   Date: string;
-  WorkingState: number
+  WorkingState: number;
 }
 
 @Component({
@@ -16,12 +17,18 @@ class JobBooking {
   styleUrls: ['./day.component.scss']
 })
 export class DayComponent implements OnInit {
+  userID: string;
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private activatedRoute: ActivatedRoute
   ) { }
 
   ngOnInit() {
+    this.userID = this.activatedRoute.snapshot.params.userID;
+    if (!this.userID) {
+      this.userID = localStorage.getItem('UserID');
+    }
     this.getData();
   }
 
@@ -145,7 +152,7 @@ export class DayComponent implements OnInit {
   }
 
   getData() {
-    this.http.get(`http://localhost:55465/JobBooking/workingState/${this.date}/${localStorage.getItem('UserID')}`).subscribe(res => {
+    this.http.get(`http://localhost:55465/JobBooking/workingState/${this.date}/${this.userID}`).subscribe(res => {
       this.workStatus = parseInt(res.toString());
     })
   }

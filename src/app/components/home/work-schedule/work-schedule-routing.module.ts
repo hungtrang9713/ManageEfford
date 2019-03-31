@@ -3,10 +3,15 @@ import { Routes, RouterModule } from '@angular/router';
 import { WorkScheduleComponent } from './work-schedule.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: WorkScheduleComponent
-  }
+    {
+      path: '',
+      redirectTo: `schedule/${localStorage.getItem('UserID')}/${localStorage.getItem('FullName')}`,
+      pathMatch: 'full'
+    },
+    {
+      path: 'schedule/:userID/:fullName',
+      component: WorkScheduleComponent
+    }
 ];
 
 @NgModule({

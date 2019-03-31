@@ -1,8 +1,11 @@
+<div class="ht-flex ht-justify-content-center">
+  <h3 class="switch-date">{{fullName}}</h3>
+</div>
 <div class="switch-date ht-flex ht-justify-content-center ht-align-items-center">
   <i class="icon-back" (click)="prevWeek()"></i>
   <div>{{selectedWeek}}</div>
   <i class="icon-next" (click)="nextWeek()">
-    </i>
+  </i>
 </div>
 
 <app-week [week]="selectedWeekNumber"></app-week>

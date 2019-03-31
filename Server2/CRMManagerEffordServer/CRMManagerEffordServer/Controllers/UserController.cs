@@ -68,6 +68,27 @@ namespace CRMManagerEffordServer.Controllers
 
             return await System.Threading.Tasks.Task.FromResult(res);
         }
+
+        [HttpGet]
+        [Route("listEmployee")]
+        public async Task<HttpResponseMessage> GetListEmployee()
+        {
+            //tạo response
+            HttpResponseMessage res = new HttpResponseMessage();
+
+            try
+            {
+                List<EmployeeManagement> listResult = this.DL.GetListEmployee(new { }, "[dbo].[Proc_GetListEmployeeManagement]");
+
+                res = Request.CreateResponse(HttpStatusCode.OK, listResult);
+            }
+            catch (Exception ex)
+            {
+                res = Request.CreateResponse(ex.Message);
+            }
+
+            return await System.Threading.Tasks.Task.FromResult(res);
+        }
     }
 
 }
