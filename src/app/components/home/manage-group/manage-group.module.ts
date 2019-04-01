@@ -8,6 +8,7 @@ import { EditUserPopupComponent } from './edit-user-popup/edit-user-popup.compon
 import { NotifierModule, NotifierOptions } from 'angular-notifier';
 import { MatDialogModule, MatCheckboxModule, MatInputModule, MatFormFieldModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxSpinnerModule } from 'ngx-spinner';
 /*
  * Custom angular notifier options
  */
@@ -63,6 +64,7 @@ const customNotifierOptions: NotifierOptions = {
     ReactiveFormsModule,
     MatInputModule,
     MatFormFieldModule,
+    NgxSpinnerModule
   ],
   entryComponents: [
     EditUserPopupComponent

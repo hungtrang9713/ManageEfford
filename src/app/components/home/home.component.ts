@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from 'src/app/shared/services/user.service';
 import { Router } from '@angular/router';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 declare var $: any;
 
@@ -11,20 +12,22 @@ declare var $: any;
 })
 export class HomeComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private spinner: NgxSpinnerService) { }
   employeeID = localStorage.getItem('UserID');
   employeeName = localStorage.getItem('FullName');
   fullName: string;
   isLead = false;
   ngOnInit() {
-    // $('mat-toolbar-row').on('click', function () {
-    //   $('mat-toolbar-row').removeClass('selected');
-    //   $(this).addClass('selected');
-    // });
+    this.spinner.show();
+
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.spinner.hide();
+    }, 500);
     this.fullName = localStorage.getItem('FullName');
     if (localStorage.getItem('IsLead') === 'true') {
       this.isLead = true;
-    }
+    };
   }
   /**
    * hàm get link chấm điểm năng suất cho nhân viên
@@ -35,7 +38,7 @@ export class HomeComponent implements OnInit {
     return `/home/produce-point/employee/${this.employeeID}/${today.getMonth() + 1}/${today.getFullYear()}`;
   }
 
-  getRouteForSchedule(){
+  getRouteForSchedule() {
     return `/home/work-schedule/schedule/${this.employeeID}/${this.employeeName}/1`;
   }
   logout() {
