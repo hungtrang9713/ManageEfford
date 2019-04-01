@@ -33,7 +33,7 @@ export class ListEmployeeComponent implements OnInit, OnDestroy {
   }
   //#region function
   navigateSchedule(userID: string, fullName: string) {
-    this.navigator.navigate([`/home/work-schedule/schedule`, userID, fullName]);
+    this.navigator.navigate([`/home/work-schedule/schedule`, userID, fullName,0]);
   }
 
   navigateEffort(userID: string) {

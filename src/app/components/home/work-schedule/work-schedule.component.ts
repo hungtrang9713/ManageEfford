@@ -20,7 +20,13 @@ export class WorkScheduleComponent implements OnInit {
   saturdayWeekSelected = moment().weekday(6 + this.selectedWeekNumber * 7).format("DD/MM/YYYY");
 
   ngOnInit() {
-    this.fullName = this.activatedroute.snapshot.params.fullName;
+    // tslint:disable-next-line:radix
+    const flag = parseInt(this.activatedroute.snapshot.params.flag);
+    if (flag === 0) {
+      this.fullName = this.activatedroute.snapshot.params.fullName;
+    } else {
+      this.fullName = localStorage.getItem('FullName');
+    }
 
     this.currentTime = moment();
   }

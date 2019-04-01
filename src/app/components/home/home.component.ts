@@ -36,7 +36,7 @@ export class HomeComponent implements OnInit {
   }
 
   getRouteForSchedule(){
-    return `/home/work-schedule/schedule/${this.employeeID}/${this.employeeName}`;
+    return `/home/work-schedule/schedule/${this.employeeID}/${this.employeeName}/1`;
   }
   logout() {
     localStorage.removeItem('Token');
