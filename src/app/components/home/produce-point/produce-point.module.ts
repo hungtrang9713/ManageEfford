@@ -15,6 +15,7 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { NotifierModule, NotifierOptions } from 'angular-notifier';
 import { SharedComponentModule } from 'src/app/shared/components/shared-component.module';
 import { AddUserPopupComponent } from 'src/app/shared/components/add-user-popup/add-user-popup.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 /*
  * Custom angular notifier options
  */
@@ -77,6 +78,7 @@ const customNotifierOptions: NotifierOptions = {
     FormsModule,
     MatSelectModule,
     A11yModule,
+    NgxSpinnerModule,
     NotifierModule.withConfig(customNotifierOptions),
     CalendarModule.forRoot({
       provide: DateAdapter,

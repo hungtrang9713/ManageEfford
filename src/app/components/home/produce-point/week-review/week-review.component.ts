@@ -8,6 +8,7 @@ import { Subscription } from 'rxjs';
 import { TaskService } from 'src/app/shared/services/task/task.service';
 import { NotifierService } from 'angular-notifier';
 import { CalendarComponent } from '../calendar/calendar.component';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 
 export interface Transaction {
@@ -71,10 +72,17 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
   constructor(private activatedRoute: ActivatedRoute,
     public taskDialog: MatDialog,
     private taskSV: TaskService,
-    notifierService: NotifierService
+    notifierService: NotifierService,
+    private spinner: NgxSpinnerService
   ) { this.notifier = notifierService; }
 
   ngOnInit() {
+    this.spinner.show();
+
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.spinner.hide();
+    }, 1000);
     this.emID = this.activatedRoute.snapshot.params.id;
     // tslint:disable-next-line:radix
     this.monthSelected = parseInt(this.activatedRoute.snapshot.params.month);
@@ -84,7 +92,6 @@ export class WeekReviewComponent implements OnInit, OnDestroy {
     this.getDataWeek(this.monthSelected, this.yearSelected, this.emID);
     // lấy dữ liệu ngày nghỉ
     this.calendar.getBookingJob(this.monthSelected, this.yearSelected, this.emID);
-
   }
   ngOnDestroy() {
     this.subcription.forEach(sub => {

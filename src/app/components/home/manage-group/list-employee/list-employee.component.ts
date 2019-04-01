@@ -6,6 +6,7 @@ import { EditUserPopupComponent } from '../edit-user-popup/edit-user-popup.compo
 import { EmployeeManagement } from 'src/app/shared/models/user';
 import { Subscription } from 'rxjs';
 import { UserService } from 'src/app/shared/services/user.service';
+import { NgxSpinnerService } from 'ngx-spinner';
 
 @Component({
   selector: 'app-list-employee',
@@ -20,10 +21,18 @@ export class ListEmployeeComponent implements OnInit, OnDestroy {
   constructor(private navigator: Router,
     public editUserDialog: MatDialog,
     public notifier: NotifierService,
-    private userSV: UserService
+    private userSV: UserService,
+    private spinner: NgxSpinnerService
   ) { }
 
   ngOnInit() {
+    /** spinner starts on init */
+    this.spinner.show();
+
+    setTimeout(() => {
+      /** spinner ends after 5 seconds */
+      this.spinner.hide();
+    }, 500);
     this.getDataEmployees();
   }
   ngOnDestroy(): void {
@@ -33,7 +42,7 @@ export class ListEmployeeComponent implements OnInit, OnDestroy {
   }
   //#region function
   navigateSchedule(userID: string, fullName: string) {
-    this.navigator.navigate([`/home/work-schedule/schedule`, userID, fullName,0]);
+    this.navigator.navigate([`/home/work-schedule/schedule`, userID, fullName, 0]);
   }
 
   navigateEffort(userID: string) {
@@ -66,8 +75,8 @@ export class ListEmployeeComponent implements OnInit, OnDestroy {
    */
   deleteUser(user) {
     const deleteSub = this.userSV.deleteUser(user).subscribe(data => {
-        this.getDataEmployees();
-        this.notifier.notify('success', 'Xóa thành công');
+      this.getDataEmployees();
+      this.notifier.notify('success', 'Xóa thành công');
     },
       err => alert(err));
   }
