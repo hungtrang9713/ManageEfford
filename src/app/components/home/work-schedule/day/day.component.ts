@@ -25,8 +25,11 @@ export class DayComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.userID = this.activatedRoute.snapshot.params.userID;
-    if (!this.userID) {
+    // tslint:disable-next-line:radix
+    const flag = parseInt(this.activatedRoute.snapshot.params.flag);
+    if (flag === 0) {
+      this.userID = this.activatedRoute.snapshot.params.userID;
+    } else {
       this.userID = localStorage.getItem('UserID');
     }
     this.getData();
