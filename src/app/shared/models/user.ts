@@ -3,6 +3,7 @@ export class User {
     UserName: string;
     FullName: string;
     IsLead: boolean;
+    IsPM: boolean;
     PassWord: string;
     LeadID: string;
     state: number;

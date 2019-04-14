@@ -7,6 +7,7 @@ import { EmployeeManagement } from 'src/app/shared/models/user';
 import { Subscription } from 'rxjs';
 import { UserService } from 'src/app/shared/services/user.service';
 import { NgxSpinnerService } from 'ngx-spinner';
+import { AddUserPopupComponent } from 'src/app/shared/components/add-user-popup/add-user-popup.component';
 
 @Component({
   selector: 'app-list-employee',
@@ -22,7 +23,8 @@ export class ListEmployeeComponent implements OnInit, OnDestroy {
     public editUserDialog: MatDialog,
     public notifier: NotifierService,
     private userSV: UserService,
-    private spinner: NgxSpinnerService
+    private spinner: NgxSpinnerService,
+    public addUserDialog: MatDialog,
   ) { }
 
   ngOnInit() {
@@ -57,7 +59,20 @@ export class ListEmployeeComponent implements OnInit, OnDestroy {
         alert(` Có lỗi xảy ra`);
       });
   }
-
+  // thêm user
+  addUser() {
+    const dialogRef = this.addUserDialog.open(AddUserPopupComponent, {
+      data: {}
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      // get lại dữ liệu
+      if (result) {
+        this.getDataEmployees();
+        this.notifier.notify('success', 'Thêm thành công');
+      }
+    });
+  }
+  // sửa user
   editUser(user) {
     const dialogRef = this.editUserDialog.open(EditUserPopupComponent, {
       data: user
