@@ -107,7 +107,7 @@ addUser() {
   });
 }
   export (){
-  const config = `http://localhost:55465/Task/Export/3/2019/CF577878-5B80-41C4-9901-B71B8B53C649`;
+  const config = `http://localhost:55465/Task/Export/3/2019/${localStorage.getItem('UserID')}`;
   window.open(config);
 }
 }

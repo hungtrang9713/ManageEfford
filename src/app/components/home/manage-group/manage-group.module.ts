@@ -9,6 +9,8 @@ import { NotifierModule, NotifierOptions } from 'angular-notifier';
 import { MatDialogModule, MatCheckboxModule, MatInputModule, MatFormFieldModule } from '@angular/material';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { AddUserPopupComponent } from 'src/app/shared/components/add-user-popup/add-user-popup.component';
+import { SharedComponentModule } from 'src/app/shared/components/shared-component.module';
 /*
  * Custom angular notifier options
  */
@@ -55,6 +57,7 @@ const customNotifierOptions: NotifierOptions = {
 @NgModule({
   declarations: [ManageGroupComponent, ListEmployeeComponent, EditUserPopupComponent],
   imports: [
+    SharedComponentModule,
     MatDialogModule,
     CommonModule,
     NotifierModule.withConfig(customNotifierOptions),
@@ -67,7 +70,8 @@ const customNotifierOptions: NotifierOptions = {
     NgxSpinnerModule
   ],
   entryComponents: [
-    EditUserPopupComponent
+    EditUserPopupComponent,
+    AddUserPopupComponent
   ]
 })
 export class ManageGroupModule { }

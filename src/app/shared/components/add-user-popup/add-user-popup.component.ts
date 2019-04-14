@@ -7,9 +7,15 @@ import { UserService } from '../../services/user.service';
 import { User } from '../../models/user';
 import { ActionState } from '../../enums/action-state';
 
-export interface Lead {
+export class Lead {
   UserID: string;
   FullName: string;
+  IsPM: boolean;
+  constructor() {
+    this.UserID = '';
+    this.FullName = '';
+    this.IsPM = false;
+  }
 }
 
 @Component({
@@ -34,6 +40,8 @@ export class AddUserPopupComponent implements OnInit, OnDestroy {
   ) { }
   // khởi tạo các đối tượng form control
   ngOnInit() {
+    // lấy data combo
+    this.getLeadInfo();
     this.rfContact = this.fb.group({
       UserName: this.fb.control('B06-', [Validators.required]),
       FullName: this.fb.control('', [Validators.required]),
@@ -41,8 +49,6 @@ export class AddUserPopupComponent implements OnInit, OnDestroy {
       IsLead: this.fb.control(0),
       LeadID: this.fb.control('cf577878-5b80-41c4-9901-b71b8b53c649', [Validators.required])
     });
-    // lấy data combo
-    this.getLeadInfo();
   }
   ngOnDestroy() {
     this.subs.forEach(e => {

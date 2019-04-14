@@ -16,6 +16,7 @@ namespace CRMManagerEffordServer.Models
         public string FullName { get; set; }
 
         public bool IsLead { get; set; }
+        public bool IsPM { get; set; }
 
         public string Password { get; set; }
         /// <summary>
