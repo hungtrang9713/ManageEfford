@@ -107,7 +107,7 @@ addUser() {
   });
 }
   export (){
-  const config = `http://localhost:55465/Task/Export/3/2019/${localStorage.getItem('UserID')}`;
+  const config = `http://localhost:55465/Task/Export/${this.monthSelected}/${this.yearSelected}/${localStorage.getItem('UserID')}`;
   window.open(config);
 }
 }

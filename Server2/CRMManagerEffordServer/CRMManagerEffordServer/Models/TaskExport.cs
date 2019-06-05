@@ -13,6 +13,7 @@ namespace CRMManagerEffordServer.Models
         public string FullName { get; set; }
 
         public string UserName { get; set; }
+        public bool IsLead { get; set; }
 
         public decimal Week1 { get; set; }
 

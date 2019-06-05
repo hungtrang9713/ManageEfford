@@ -6,8 +6,8 @@
         <div class="name">{{fullName}}</div>
         <mat-icon mat-button [matMenuTriggerFor]="menu" class="icon-setting"></mat-icon>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item>Đổi mật khẩu</button>
-          <button mat-menu-item>Cập nhật ảnh đại diện</button>
+          <button mat-menu-item disabled>Đổi mật khẩu</button>
+          <button mat-menu-item disabled>Cập nhật ảnh đại diện</button>
           <button mat-menu-item (click)="logout()">Đăng xuất</button>
         </mat-menu>
       </div>
@@ -28,7 +28,7 @@
           <span>Quản lý các nhóm</span>
         </mat-toolbar-row>
 
-        <mat-toolbar-row routerLink="/home/manager-pbi" *ngIf="isLead">
+        <mat-toolbar-row routerLink="/home/manager-pbi" *ngIf="false">
           <span>Quản lý PBI</span>
         </mat-toolbar-row>
       </mat-toolbar>
