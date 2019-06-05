@@ -42,5 +42,6 @@ namespace CRMManagerEffordServer.Models
         public decimal Week4 { get; set; }
 
         public decimal Total { get; set; }
+        public bool IsLead { get; set; }
     }
 }
