@@ -35,7 +35,7 @@
     "ngx-spinner": "^7.0.0",
     "npm": "^6.9.0",
     "rxjs": "~6.3.3",
-    "soap": "^0.26.0",
+    "soap": "^0.45.0",
     "zone.js": "~0.8.26"
   },
   "devDependencies": {
